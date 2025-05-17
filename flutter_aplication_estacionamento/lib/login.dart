@@ -37,6 +37,9 @@ class _MyHomePageState extends State<Login> {
               Text('Digite o CPF, CNPJ ou E-maiil', style: TextStyle(
                 fontSize: 16,
               )),
+              Text('TESTANTO UPLOAD GIT', style: TextStyle(
+                fontSize: 16,
+              )),
               SizedBox(height: 10),
               Container(
                 height: 42,
@@ -116,7 +119,7 @@ class _MyHomePageState extends State<Login> {
                     children: [
                       Icon(Icons.alarm, color: Color(0xcc6B088C)),
                       SizedBox(width: 15),
-                      Text('Inscrever-se com Google', style: TextStyle(
+                      Text('Inscrever-se com ', style: TextStyle(
                         fontSize: 14,
                       )),
                     ],
