@@ -58,7 +58,7 @@ class _MyHomePageState extends State<Login> {
               ),
               SizedBox(height: 25),
           
-              Text('Digite a senha', style: TextStyle(
+              Text('Digite a ssenha', style: TextStyle(
                 fontSize: 16,
               )),
               SizedBox(height: 10),
