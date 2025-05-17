@@ -37,9 +37,6 @@ class _MyHomePageState extends State<Login> {
               Text('Digite o CPF, CNPJ ou E-maiil', style: TextStyle(
                 fontSize: 16,
               )),
-              Text('TESTANTO UPLOAD GIT', style: TextStyle(
-                fontSize: 16,
-              )),
               SizedBox(height: 10),
               Container(
                 height: 42,
