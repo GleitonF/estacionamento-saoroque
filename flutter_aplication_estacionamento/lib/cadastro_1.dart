@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aplication_estacionamento/Cadastro2.dart';
+import 'package:flutter_aplication_estacionamento/cadastro_2.dart';
 
 class Cadastro1 extends StatefulWidget {
   const Cadastro1({super.key, required this.title});
