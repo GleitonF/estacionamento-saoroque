@@ -135,7 +135,7 @@ class _MyHomePageState extends State<Cadastro3> {
                     builder: (context) {
                       return AlertDialog(
                         title: Text('Cadastro realizado com sucesso!'),
-                        content: Lottie.asset('lotties/verified.json'),
+                        content: Lottie.asset('assets/lotties/verified.json'),
                         actions: [
                           TextButton(
                             style: TextButton.styleFrom(
