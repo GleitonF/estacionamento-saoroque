@@ -173,94 +173,165 @@ class _MyHomePageState extends State<Home> {
             ),
             // segundo container
             SizedBox(height: 20),
+            // Container(
+            //     padding: EdgeInsets.all(12),
+            //     decoration: BoxDecoration(color: AppColors.primaryColor),
+            //     height: 200,
+            //     width: 450,
+            //     child: Column(
+            //       crossAxisAlignment: CrossAxisAlignment.center,
+            //       children: [
+            //         Column(
+            //         children:[Text(
+            //           'Saldos',
+            //           style: TextStyle(fontSize: 20),
+            //         textAlign: TextAlign.center,
+            //          ),
+            //          ],
+            //          ),
+            //          SizedBox(height: 5),
+            //          Row(
+            //           children: [ 
+            //             Text(
+            //             '______________________________',
+            //             style: TextStyle(fontSize: 20, color: Colors.black),
+            //             textAlign: TextAlign.center,
+            //             ),
+            //           ],
+            //          ),
+            //          // linha atençao
+            //         SizedBox(height: 20),
+            //         Row(
+            //            crossAxisAlignment: CrossAxisAlignment.start,
+            //            children: [
+            //                   Column(
+            //                     crossAxisAlignment: CrossAxisAlignment.start,
+            //                     children: [ 
+            //                       Row(
+            //                         children:[
+            //                       Text(
+            //                         'Seu saldo atual de créditos para uso',
+            //                         style: TextStyle(fontSize: 14, color: Colors.black),
+            //                         ),
+            //                         ],
+            //                       ),
+            //                       SizedBox(height: 8),
+            //                       Row(
+            //                         children:[
+            //                           GestureDetector(
+            //                             onTap: () {
+            //                             Navigator.push(
+            //                             context,
+            //                             MaterialPageRoute(builder: (context) => Home(title: 'teste')),
+            //                             );
+            //                             },
+            //                             child:
+            //                             Container(
+            //                               height: 30,
+            //                               width: 180,
+            //                               decoration: BoxDecoration(
+            //                               color: Color(0xcc6B088C),
+            //                               borderRadius: BorderRadius.circular(9)
+            //                               ),
+            //                               child: Row(
+            //                                 mainAxisAlignment: MainAxisAlignment.center,
+            //                                 children: [
+            //                                   Text('Adicionar Créditos', style: TextStyle(
+            //                                   fontSize: 15,
+            //                                   color: Colors.white,
+            //                                   fontWeight: FontWeight.bold
+            //                                   )),
+            //                               ],
+            //                               ),
+            //                             ),
+            //                         ),
+            //                         ],
+            //                       ),
+            //                     ],
+            //                   ),
+                            
+            //                 SizedBox(height: 50),
+
+                          
+                            
+            //                   Padding(
+            //                     padding: const EdgeInsets.only(left: 50),
+            //                     child: CircleAvatar(radius:45,backgroundColor: Color(0xcc6B088C),),
+            //                   ),
+                           
+                          
+                          
+            //             ],
+            //         ),
+            //      ],
+            //     ),
+            // ),
+            SizedBox(height: 40),
             Container(
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(color: AppColors.primaryColor),
-                height: 200,
-                width: 450,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+              width: 450,
+              height: 160,
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
                   children: [
                     Column(
-                    children:[Text(
-                      'Saldos',
-                      style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center,
-                     ),
-                     ],
-                     ),
-                     SizedBox(height: 5),
-                     Row(
-                      children: [ 
-                        Text(
-                        '______________________________',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                        textAlign: TextAlign.center,
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 180),
+                          child: Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text('Saldo', style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                
+                              ],
+                            ),
+                          ),
+                        ),
+                       
+                        Text('Seu saldo atual de créditos para uso.'),
+                        SizedBox(height: 30),
+                        Row(
+                          children: [
+                            SizedBox(width: 60),
+                            Container(
+                                height: 30,
+                                width: 180,
+                                decoration: BoxDecoration(
+                                  color: Color(0xcc6B088C),
+                                  borderRadius: BorderRadius.circular(9)
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    
+                                    Text('Adicionar Créditos', style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold
+                                    )),
+                                  ],
+                                ),
+                            ),
+                          ],
                         ),
                       ],
-                     ),
-                     // linha atençao
-                    SizedBox(height: 20),
-                    Row(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                        
-                          Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [ 
-                              Row(
-                                children:[
-                               Text(
-                                 'Seu saldo atual de créditos para uso',
-                                 style: TextStyle(fontSize: 14, color: Colors.black),
-                                ),
-                                ],
-                              ),
-                              SizedBox(height: 8),
-                              Row(
-                                children:[
-                                  GestureDetector(
-                                    onTap: () {
-                                    Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Home(title: 'teste')),
-                                    );
-                                    },
-                                    child:
-                                    Container(
-                                      height: 30,
-                                      width: 180,
-                                      decoration: BoxDecoration(
-                                      color: Color(0xcc6B088C),
-                                      borderRadius: BorderRadius.circular(9)
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text('Adicionar Créditos', style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold
-                                          )),
-                                       ],
-                                      ),
-                                    ),
-                                 ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          ),
-                                        SizedBox(height: 50),
-
-                         CircleAvatar(radius:45,backgroundColor: Color(0xcc6B088C),),
-                          SizedBox(width: 10),
-                        ],
                     ),
-                 ],
+                    SizedBox(width: 30),
+                    VerticalDivider(),
+                    SizedBox(width: 20), 
+                    CircleAvatar(radius:45,backgroundColor: Color(0xcc6B088C),),
+                  ],
                 ),
-            ),
+              ),
+            )
           ],
         ),
       ),
