@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/Home.dart';
-import 'package:flutter_aplication_estacionamento/cadastro1.dart';
+import 'package:flutter_aplication_estacionamento/cadastro_1.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key, required this.title});
