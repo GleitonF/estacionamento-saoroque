@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aplication_estacionamento/home.dart';
+import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:lottie/lottie.dart';
 

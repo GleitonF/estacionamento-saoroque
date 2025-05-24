@@ -163,7 +163,7 @@ class _MyHomePageState extends State<Home> {
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         title: Text(
-          'Página Inicial2',
+          'Página Inicial',
           style: TextStyle(
             color: AppColors.secondaryColor,
             fontSize: 16,
@@ -174,98 +174,109 @@ class _MyHomePageState extends State<Home> {
         iconTheme: IconThemeData(color: AppColors.secondaryColor),
       ),
       body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(color: AppColors.primaryColor),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      spacing: 5,
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: AppColors.secondaryColor,
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.home_outlined,
-                              color: AppColors.primaryColor,
-                            ),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(color: AppColors.primaryColor),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    spacing: 5,
+                    children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: AppColors.secondaryColor,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.home_outlined,
+                            color: AppColors.primaryColor,
                           ),
                         ),
-                        Text('Início'),
-                      ],
-                    ),
-                    Row(
-                      spacing: 5,
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: AppColors.secondaryColor,
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
+                      ),
+                      Text('Início'),
+                    ],
+                  ),
+                  Row(
+                    spacing: 5,
+                    children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: AppColors.secondaryColor,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
                             Icons.savings,
-                              color: AppColors.primaryColor,
-                            ),
+                            color: AppColors.primaryColor,
                           ),
                         ),
-                        Text('Saldo'),
-                      ],
-                    ),
-                    Row(
-                      spacing: 5,
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: AppColors.secondaryColor,
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.refresh_outlined,
-                              color: AppColors.primaryColor,
-                            ),
+                      ),
+                      Text('Saldo'),
+                    ],
+                  ),
+                  Row(
+                    spacing: 5,
+                    children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: AppColors.secondaryColor,
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.refresh_outlined,
+                            color: AppColors.primaryColor,
                           ),
                         ),
-                        Text('Historico'),
-                      ],
+                      ),
+                      Text('Historico'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            // primeiro container
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
                     ),
                   ],
                 ),
-              ),
-              SizedBox(height: 50),
-              // primeiro container
-              Container(
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(color: AppColors.primaryColor),
                 height: 305,
                 width: 396,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      'Avisos',
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center,
-                    ),
                     SizedBox(height: 5),
-                    Text(
-                      '_______________________________________',
-                      style: TextStyle(fontSize: 20, color: Colors.grey),
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Avisos',
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
+
+                    Divider(color: Colors.grey, thickness: 1),
                     // linha atençao
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Icon(
-                          Icons.warning_amber_rounded,
+                          Icons.warning_rounded,
                           size: 80,
-                          color: Colors.yellow,
+                          color: Colors.blueGrey,
                         ),
                         SizedBox(width: 10),
                         Expanded(
@@ -293,23 +304,15 @@ class _MyHomePageState extends State<Home> {
                       ],
                     ),
                     SizedBox(height: 3),
-                    Text(
-                      '_______________________________________',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    Divider(color: Colors.grey, thickness: 1),
                     //linha sistema em manutenção
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Icon(
-                          Icons.warning_amber_rounded,
+                          Icons.warning_rounded,
                           size: 80,
-                          color: Colors.yellow,
+                          color: Colors.blueGrey,
                         ),
                         SizedBox(width: 10),
                         Expanded(
@@ -340,88 +343,101 @@ class _MyHomePageState extends State<Home> {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
-              // segundo container
-              Container(
-                width: 410,
+            ),
+            SizedBox(height: 50),
+            // segundo container
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
                 height: 160,
                 decoration: BoxDecoration(
-                  color: AppColors.primaryColor
+                  color: AppColors.primaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: Row(
                     children: [
                       Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 180),
+                            padding: const EdgeInsets.only(left: 180, top: 20),
                             child: Expanded(
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Text('Saldo', style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold
-                                  ),),
-                                  
+                                  Text(
+                                    'Saldo',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           ),
-                         
+
                           Text('Seu saldo atual de créditos para uso.'),
                           SizedBox(height: 30),
                           Row(
                             children: [
-                              SizedBox(width: 60),
-                              Container(
-                                  height: 30,
-                                  width: 180,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xcc6B088C),
-                                    borderRadius: BorderRadius.circular(9)
+                              SizedBox(width: 90),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: EdgeInsets.all(10),
+                                  backgroundColor: AppColors.secondaryColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      
-                                      Text('Adicionar Créditos', style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold
-                                      )),
-                                    ],
+                                ),
+                                onPressed: () {
+                                  // Ação ao clicar no botão
+                                },
+                                child: Text(
+                                  'Adicionar Créditos',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
+                                ),
                               ),
                             ],
                           ),
                         ],
                       ),
-                      SizedBox(width: 30),
+                      SizedBox(width: 20),
                       VerticalDivider(),
-                      SizedBox(width: 8), 
-                      Container(
-                        width: 90,
-                        height: 94,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: AppColors.secondaryColor
-                        ),
+                      SizedBox(width: 5),
+                      CircleAvatar(
+                        backgroundColor: AppColors.secondaryColor,
+                        radius: 30,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('R\$', style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primaryColor
-                            )),
-                            Text('20,00', style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primaryColor
-                            )),
+                            Text(
+                              'R\$',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: AppColors.primaryColor,
+                              ),
+                            ),
+                            Text(
+                              '20,00',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: AppColors.primaryColor,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -429,17 +445,113 @@ class _MyHomePageState extends State<Home> {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
-              Container(
+            ),
+            SizedBox(height: 50),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
                 width: 410,
-                height: 160,
                 decoration: BoxDecoration(
-                  color: AppColors.primaryColor
+                  color: AppColors.primaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 12.0,
+                        right: 12.0,
+                        top: 8,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Cadastro',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(color: Colors.grey, thickness: 1),
+
+                    Padding(
+                      padding: EdgeInsets.all(8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.directions_car_filled,
+                                size: 60,
+                                color: Colors.blueGrey,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Chevrolet Onix',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Placa: EFB-5H47',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '01:35:35 Hora(s) \nRestantes',
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(color: Colors.grey, thickness: 1),
+                    SizedBox(height: 10),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.all(10),
+                        backgroundColor: AppColors.secondaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Cadastrar Veículo',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+            SizedBox(height: 50),
+          ],
         ),
+      ),
     );
   }
 }

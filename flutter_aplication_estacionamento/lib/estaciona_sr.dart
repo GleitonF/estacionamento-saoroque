@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aplication_estacionamento/home.dart';
-import 'package:flutter_aplication_estacionamento/Login.dart';
-import 'package:flutter_aplication_estacionamento/cadastro_3.dart';
+import 'package:flutter_aplication_estacionamento/pages/Home.dart';
+import 'package:flutter_aplication_estacionamento/pages/Login.dart';
+import 'package:flutter_aplication_estacionamento/pages/cadastro_3.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Login(title: 'Flutter Demo Home Page'),
+      home: const Home(title: 'Flutter Demo Home Page'),
     );
   }
 }
