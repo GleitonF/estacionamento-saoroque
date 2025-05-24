@@ -208,7 +208,7 @@ class _MyHomePageState extends State<Home> {
                           child: IconButton(
                             onPressed: () {},
                             icon: Icon(
-                              Icons.money_off_rounded,
+                            Icons.savings,
                               color: AppColors.primaryColor,
                             ),
                           ),
@@ -225,7 +225,7 @@ class _MyHomePageState extends State<Home> {
                           child: IconButton(
                             onPressed: () {},
                             icon: Icon(
-                              Icons.keyboard_return_rounded,
+                              Icons.refresh_outlined,
                               color: AppColors.primaryColor,
                             ),
                           ),
@@ -401,12 +401,42 @@ class _MyHomePageState extends State<Home> {
                       ),
                       SizedBox(width: 30),
                       VerticalDivider(),
-                      SizedBox(width: 10), 
-                      CircleAvatar(radius:45,backgroundColor: Color(0xcc6B088C),),
+                      SizedBox(width: 8), 
+                      Container(
+                        width: 90,
+                        height: 94,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: AppColors.secondaryColor
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('R\$', style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.primaryColor
+                            )),
+                            Text('20,00', style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.primaryColor
+                            )),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
+              SizedBox(height: 50),
+              Container(
+                width: 410,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor
+                ),
+              ),
             ],
           ),
         ),
