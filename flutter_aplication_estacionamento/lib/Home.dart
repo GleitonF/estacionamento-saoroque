@@ -163,7 +163,7 @@ class _MyHomePageState extends State<Home> {
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         title: Text(
-          'Página Inicial',
+          'Página Inicial1',
           style: TextStyle(
             color: AppColors.secondaryColor,
             fontSize: 16,
