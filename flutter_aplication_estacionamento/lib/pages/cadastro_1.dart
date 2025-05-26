@@ -4,8 +4,6 @@ import 'package:flutter_aplication_estacionamento/pages/cadastro_2.dart';
 class Cadastro1 extends StatefulWidget {
   const Cadastro1({super.key, required this.title});
 
-  
-
   final String title;
 
   @override
@@ -13,12 +11,10 @@ class Cadastro1 extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<Cadastro1> {
-   final TextEditingController dataController = TextEditingController();
- 
+  final TextEditingController dataController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       backgroundColor: Color(0XFFEBDEF4),
 
@@ -29,9 +25,7 @@ class _MyHomePageState extends State<Cadastro1> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Cadastro de novo usuário', style: TextStyle(
-                fontSize: 16
-              )),
+              Text('Cadastro de novo usuário', style: TextStyle(fontSize: 16)),
               SizedBox(height: 30),
               LinearProgressIndicator(
                 value: 0.3,
@@ -41,9 +35,7 @@ class _MyHomePageState extends State<Cadastro1> {
                 borderRadius: BorderRadius.circular(10),
               ),
               SizedBox(height: 10),
-              Text('Passo 1 de 3', style: TextStyle(
-                fontSize: 16
-              )),
+              Text('Passo 1 de 3', style: TextStyle(fontSize: 16)),
               SizedBox(height: 50),
               TextField(
                 decoration: InputDecoration(
@@ -53,6 +45,7 @@ class _MyHomePageState extends State<Cadastro1> {
               ),
               SizedBox(height: 50),
               TextField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(),
@@ -60,6 +53,7 @@ class _MyHomePageState extends State<Cadastro1> {
               ),
               SizedBox(height: 50),
               TextField(
+                keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                   labelText: 'Número de telefone (com DDD)',
                   border: OutlineInputBorder(),
@@ -67,13 +61,15 @@ class _MyHomePageState extends State<Cadastro1> {
               ),
               SizedBox(height: 50),
               TextField(
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Informe o seu CPF',
                   border: OutlineInputBorder(),
                 ),
-              ), 
+              ),
               SizedBox(height: 50),
               TextField(
+                keyboardType: TextInputType.datetime,
                 decoration: InputDecoration(
                   labelText: 'Insira a sua data de nascimento',
                   border: OutlineInputBorder(),
@@ -84,7 +80,9 @@ class _MyHomePageState extends State<Cadastro1> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Cadastro2(title: 'teste')),
+                    MaterialPageRoute(
+                      builder: (context) => Cadastro2(title: 'teste'),
+                    ),
                   );
                 },
                 child: Container(
@@ -92,16 +90,19 @@ class _MyHomePageState extends State<Cadastro1> {
                   width: 280,
                   decoration: BoxDecoration(
                     color: Color(0xcc6B088C),
-                    borderRadius: BorderRadius.circular(9)
+                    borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Próximo', style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold
-                      )),
+                      Text(
+                        'Próximo',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -111,32 +112,32 @@ class _MyHomePageState extends State<Cadastro1> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                 child: Container(
+                child: Container(
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
                     color: Color(0xcc6B088C),
-                    borderRadius: BorderRadius.circular(9)
+                    borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Cancelar', style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold
-                      )),
+                      Text(
+                        'Cancelar',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                               ),
+                ),
               ),
-
-
             ],
           ),
         ),
       ),
-      
     );
   }
 }

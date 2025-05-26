@@ -140,18 +140,18 @@ class _MyHomePageState extends State<Cadastro3> {
                           TextButton(
                             style: TextButton.styleFrom(
                               backgroundColor: AppColors.secondaryColor,
-                              padding: EdgeInsets.symmetric(horizontal: 115),
+                              padding: EdgeInsets.symmetric(horizontal: 80),
                             ),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Home(title: 'teste'),
+                                  builder: (context) => Home(),
                                 ),
                               );
                             },
                             child: Text(
-                              'Próximo',
+                              'Ir para a tela inicial',
                               style: TextStyle(
                                 color: AppColors.primaryColor,
                                 fontWeight: FontWeight.bold,
@@ -167,7 +167,7 @@ class _MyHomePageState extends State<Cadastro3> {
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xcc6B088C),
+                    color: AppColors.secondaryColor,
                     borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(

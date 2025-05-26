@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
+import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key, required this.title});
-
-  final String title;
+  const Home({super.key});
 
   @override
   State<Home> createState() => _MyHomePageState();
@@ -14,151 +14,9 @@ class _MyHomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.tertiaryColor,
-      drawer: Drawer(
+      drawer: DrawerWidget(
         backgroundColor: AppColors.primaryColor,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              DrawerHeader(child: Image.asset('assets/images/logo_app.png')),
-              SizedBox(height: 10),
-              Row(
-                spacing: 5,
-                children: [
-                  Icon(Icons.home_outlined, size: 30),
-                  Text(
-                    'INÍCIO',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 5,
-                    children: [
-                      Icon(Icons.money_off_rounded, size: 30),
-                      Text(
-                        'SALDO',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Icon(Icons.keyboard_arrow_down_rounded),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 5,
-                    children: [
-                      Icon(Icons.no_crash_outlined, size: 30),
-                      Text(
-                        'VAGAS',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Icon(Icons.keyboard_arrow_down_rounded),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 5,
-                    children: [
-                      Icon(Icons.book_outlined, size: 30),
-                      Text(
-                        'IRREGULARIDADES',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Icon(Icons.keyboard_arrow_down_rounded),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                spacing: 5,
-                children: [
-                  Icon(Icons.location_on_outlined, size: 30),
-                  Text(
-                    'MAPA',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                spacing: 5,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.black, width: 2),
-                    ),
-                    child: Icon(Icons.person_2_outlined, size: 30),
-                  ),
-                  Text(
-                    'DADOS PESSOAIS',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                spacing: 5,
-                children: [
-                  Icon(Icons.chat_outlined, size: 30),
-                  Text(
-                    'CONTATO',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                spacing: 5,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.black, width: 2),
-                    ),
-                    child: Text(
-                      'X',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                  Text(
-                    'SAIR',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        child: ListView(),
       ),
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
@@ -199,22 +57,30 @@ class _MyHomePageState extends State<Home> {
                       Text('Início'),
                     ],
                   ),
-                  Row(
-                    spacing: 5,
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: AppColors.secondaryColor,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.savings,
-                            color: AppColors.primaryColor,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Saldo()),
+                      );
+                    },
+                    child: Row(
+                      spacing: 5,
+                      children: [
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundColor: AppColors.secondaryColor,
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.savings,
+                              color: AppColors.primaryColor,
+                            ),
                           ),
                         ),
-                      ),
-                      Text('Saldo'),
-                    ],
+                        Text('Saldo'),
+                      ],
+                    ),
                   ),
                   Row(
                     spacing: 5,
@@ -538,7 +404,7 @@ class _MyHomePageState extends State<Home> {
                         'Cadastrar Veículo',
                         style: TextStyle(
                           color: AppColors.primaryColor,
-                          fontSize: 19,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
