@@ -3,6 +3,10 @@ import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/_core/custom_tile.dart';
 import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/pages/mapa.dart';
+import 'package:flutter_aplication_estacionamento/pages/vagas.dart';
+import 'package:flutter_aplication_estacionamento/pages/historico_estacionamento.dart';
+import 'package:flutter_aplication_estacionamento/pages/historico_saldo.dart';
+
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({
@@ -47,7 +51,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             children: [
               Divider(color: Colors.grey, thickness: 1),
               ListTile(title: Text('Comprar Créditos'), onTap: () {}),
-              ListTile(title: Text('Consultar Histórico'), onTap: () {}),
+              ListTile(title: Text('Consultar Histórico'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HistoricoSaldo()));
+              }),
               Divider(color: Colors.grey, thickness: 1),
             ],
           ),
@@ -57,9 +64,15 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: 'VAGAS',
             children: [
               Divider(color: Colors.grey, thickness: 1),
-              ListTile(title: Text('Ativar estacionamento'), onTap: () {}),
+              ListTile(title: Text('Ativar estacionamento'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Vagas()));
+              }),
               ListTile(title: Text('Mapa de vagas'), onTap: () {}),
-              ListTile(title: Text('Histórico de ativações'), onTap: () {}),
+              ListTile(title: Text('Histórico de ativações'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HistoricoEstacionamento()));
+              }),
               Divider(color: Colors.grey, thickness: 1),
             ],
           ),

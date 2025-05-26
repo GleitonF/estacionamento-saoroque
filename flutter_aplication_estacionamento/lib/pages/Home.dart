@@ -71,7 +71,12 @@ class _MyHomePageState extends State<Home> {
                           radius: 20,
                           backgroundColor: AppColors.secondaryColor,
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const Saldo())
+                              );
+                            },
                             icon: Icon(
                               Icons.savings,
                               color: AppColors.primaryColor,
