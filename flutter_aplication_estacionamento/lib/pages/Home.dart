@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
+import 'package:lottie/lottie.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -74,7 +75,9 @@ class _MyHomePageState extends State<Home> {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => const Saldo())
+                                MaterialPageRoute(
+                                  builder: (context) => const Saldo(),
+                                ),
                               );
                             },
                             icon: Icon(
@@ -404,7 +407,125 @@ class _MyHomePageState extends State<Home> {
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text(
+                                'Cadastro de Veículo',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  SizedBox(height: 10),
+                                  Row(
+                                    children: [
+                                      Text('Insira a Placa do Veículo'),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+                                  TextFormField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 15,
+                                      ),
+                                      backgroundColor: AppColors.secondaryColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog(
+                                            title: Text(
+                                              'Veículo cadastrado com sucesso!',
+                                            ),
+                                            content: Lottie.asset(
+                                              'assets/lotties/verified.json',
+                                            ),
+                                            actions: [
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                  backgroundColor:
+                                                      AppColors.secondaryColor,
+                                                  padding: EdgeInsets.symmetric(
+                                                    horizontal: 80,
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  Navigator.pushAndRemoveUntil(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder:
+                                                          (context) => Home(),
+                                                    ),
+                                                    (route) => false,
+                                                  );
+                                                },
+                                                child: Text(
+                                                  'Ir para a tela inicial',
+                                                  style: TextStyle(
+                                                    color:
+                                                        AppColors.primaryColor,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: Text(
+                                      'Confirmar',
+                                      style: TextStyle(
+                                        color: AppColors.primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  TextButton(
+                                    style: TextButton.styleFrom(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 19,
+                                      ),
+                                      backgroundColor: AppColors.secondaryColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(5),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Cancelar',
+                                      style: TextStyle(
+                                        color: AppColors.primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
                       child: Text(
                         'Cadastrar Veículo',
                         style: TextStyle(
