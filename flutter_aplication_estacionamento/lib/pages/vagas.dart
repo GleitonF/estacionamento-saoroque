@@ -201,7 +201,7 @@ class _MyHomePageState extends State<Vagas> {
                                       ),
                                       content: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                         children: [
                                           TextButton(
                                             style: TextButton.styleFrom(

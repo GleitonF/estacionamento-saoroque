@@ -6,6 +6,10 @@ import 'package:flutter_aplication_estacionamento/pages/mapa.dart';
 import 'package:flutter_aplication_estacionamento/pages/vagas.dart';
 import 'package:flutter_aplication_estacionamento/pages/historico_estacionamento.dart';
 import 'package:flutter_aplication_estacionamento/pages/historico_saldo.dart';
+import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
+import 'package:flutter_aplication_estacionamento/pages/irregularidades_pendentes.dart';
+import 'package:flutter_aplication_estacionamento/pages/historico_irregularidades.dart';
+import 'package:flutter_aplication_estacionamento/pages/contato.dart';
 
 
 class DrawerWidget extends StatefulWidget {
@@ -50,7 +54,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             icon: Icons.savings_outlined,
             children: [
               Divider(color: Colors.grey, thickness: 1),
-              ListTile(title: Text('Comprar Créditos'), onTap: () {}),
+              ListTile(title: Text('Comprar Créditos'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const CompraCredito()));
+              }),
               ListTile(title: Text('Consultar Histórico'), onTap: () {
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const HistoricoSaldo()));
@@ -68,7 +75,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Vagas()));
               }),
-              ListTile(title: Text('Mapa de vagas'), onTap: () {}),
+              ListTile(title: Text('Mapa de vagas'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Mapa()));
+              }),
               ListTile(title: Text('Histórico de ativações'), onTap: () {
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const HistoricoEstacionamento()));
@@ -82,8 +92,14 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: 'IRREGULARIDADES',
             children: [
               Divider(color: Colors.grey, thickness: 1),
-              ListTile(title: Text('Pendentes'), onTap: () {}),
-              ListTile(title: Text('Histórico'), onTap: () {}),
+              ListTile(title: Text('Pendentes'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const IrregularidadesPendentes()));
+              }),
+              ListTile(title: Text('Histórico'), onTap: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HistoricoIrregularidades()));
+              }),
               Divider(color: Colors.grey, thickness: 1),
             ],
           ),
@@ -107,7 +123,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           ListTile(
             leading: Icon(Icons.chat, size: 30),
             title: Text('CONTATO'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Contato()));
+            },
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app, size: 30),

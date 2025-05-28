@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 
 class Saldo extends StatefulWidget {
@@ -128,7 +129,8 @@ class _SaldoState extends State<Saldo> {
                         ),
                       ),
                       onPressed: () {
-                        // Ação ao clicar no botão
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const CompraCredito()));
                       },
                       child: Text(
                         'Adicionar Créditos',
