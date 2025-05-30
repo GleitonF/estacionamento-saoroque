@@ -10,6 +10,7 @@ import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
 import 'package:flutter_aplication_estacionamento/pages/irregularidades_pendentes.dart';
 import 'package:flutter_aplication_estacionamento/pages/historico_irregularidades.dart';
 import 'package:flutter_aplication_estacionamento/pages/contato.dart';
+import 'package:flutter_aplication_estacionamento/pages/login.dart';
 
 
 class DrawerWidget extends StatefulWidget {
@@ -131,7 +132,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           ListTile(
             leading: Icon(Icons.exit_to_app, size: 30),
             title: Text('SAIR'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushAndRemoveUntil(context, 
+              MaterialPageRoute(builder: (context) => const Login(title: 'teste')), (route) => false);
+            },
           ),
         ],
       ),

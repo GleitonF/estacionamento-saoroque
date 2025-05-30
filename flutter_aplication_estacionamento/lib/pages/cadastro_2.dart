@@ -14,11 +14,19 @@ class Cadastro2 extends StatefulWidget {
 
 class _MyHomePageState extends State<Cadastro2> {
   final TextEditingController _senhaController = TextEditingController();
+  final TextEditingController _senhaController2 = TextEditingController();
   bool _obscureText = true;
+  bool _obscureText2 = true;
 
   void _toggleVisibility() {
     setState(() {
       _obscureText = !_obscureText;
+    });
+  }
+
+  void _toggleVisibility2() {
+    setState(() {
+      _obscureText2 = !_obscureText;
     });
   }
  
@@ -69,16 +77,16 @@ class _MyHomePageState extends State<Cadastro2> {
                 ),
               SizedBox(height: 100),
                 TextField(
-                  controller: _senhaController,
-                  obscureText: _obscureText,
+                  controller: _senhaController2,
+                  obscureText: _obscureText2,
                   decoration: InputDecoration(
                     labelText: 'Confirme a senha:',
                     border: OutlineInputBorder(),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _obscureText ? Icons.visibility_off : Icons.visibility,
+                        _obscureText2 ? Icons.visibility_off : Icons.visibility,
                       ),
-                      onPressed: _toggleVisibility,
+                      onPressed: _toggleVisibility2,
                     ),
                   ),
                 ),
