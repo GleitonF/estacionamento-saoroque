@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
-import 'package:lottie/lottie.dart';
 
 class HistoricoIrregularidades extends StatefulWidget {
   const HistoricoIrregularidades({super.key});

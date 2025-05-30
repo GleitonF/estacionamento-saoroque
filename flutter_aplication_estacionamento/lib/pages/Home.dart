@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
+import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
+import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
 import 'package:lottie/lottie.dart';
 
 class Home extends StatefulWidget {
@@ -35,81 +36,7 @@ class _MyHomePageState extends State<Home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(color: AppColors.primaryColor),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 5,
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: AppColors.secondaryColor,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.home_outlined,
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                      Text('Início'),
-                    ],
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Saldo()),
-                      );
-                    },
-                    child: Row(
-                      spacing: 5,
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: AppColors.secondaryColor,
-                          child: IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Saldo(),
-                                ),
-                              );
-                            },
-                            icon: Icon(
-                              Icons.savings,
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                        ),
-                        Text('Saldo'),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    spacing: 5,
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: AppColors.secondaryColor,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.refresh_outlined,
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                      Text('Historico'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            NavbarWidget(),
             SizedBox(height: 50),
             // primeiro container
             Padding(
@@ -162,14 +89,14 @@ class _MyHomePageState extends State<Home> {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                                  color: AppColors.textColor,
                                 ),
                               ),
                               Text(
                                 'Você possui irregularidades no pagamento \n do ticket',
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black,
+                                  color: AppColors.textColor,
                                 ),
                               ),
                             ],
@@ -198,14 +125,14 @@ class _MyHomePageState extends State<Home> {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                                  color: AppColors.textColor,
                                 ),
                               ),
                               Text(
                                 'No momento aplicativo E-facil São \n Roque está com algumas \n funcionalidades limitadas. ',
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black,
+                                  color: AppColors.textColor,
                                 ),
                               ),
                             ],
@@ -253,6 +180,7 @@ class _MyHomePageState extends State<Home> {
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
+                                      color: AppColors.textColor,
                                     ),
                                   ),
                                 ],
@@ -260,7 +188,10 @@ class _MyHomePageState extends State<Home> {
                             ),
                           ),
 
-                          Text('Seu saldo atual de créditos para uso.'),
+                          Text(
+                            'Seu saldo atual de créditos para uso.',
+                            style: TextStyle(color: AppColors.textColor),
+                          ),
                           SizedBox(height: 30),
                           Row(
                             children: [
@@ -274,7 +205,12 @@ class _MyHomePageState extends State<Home> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  // Ação ao clicar no botão
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => CompraCredito(),
+                                    ),
+                                  );
                                 },
                                 child: Text(
                                   'Adicionar Créditos',
@@ -352,6 +288,7 @@ class _MyHomePageState extends State<Home> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
+                              color: AppColors.textColor,
                             ),
                           ),
                         ],
@@ -380,11 +317,15 @@ class _MyHomePageState extends State<Home> {
                                     style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
+                                      color: AppColors.textColor,
                                     ),
                                   ),
                                   Text(
                                     'Placa: EFB-5H47',
-                                    style: TextStyle(fontSize: 16),
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColors.textColor,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -393,6 +334,7 @@ class _MyHomePageState extends State<Home> {
                           Text(
                             '01:35:35 Hora(s) \nRestantes',
                             textAlign: TextAlign.center,
+                            style: TextStyle(color: AppColors.textColor),
                           ),
                         ],
                       ),

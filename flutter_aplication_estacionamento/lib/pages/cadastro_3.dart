@@ -133,33 +133,66 @@ class _MyHomePageState extends State<Cadastro3> {
                     barrierDismissible: false,
                     context: context,
                     builder: (context) {
-                      return AlertDialog(
-                        title: Text('Cadastro realizado com sucesso!'),
-                        content: Lottie.asset('assets/lotties/verified.json'),
-                        actions: [
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: AppColors.secondaryColor,
-                              padding: EdgeInsets.symmetric(horizontal: 80),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Home(),
+                      if (_termosAceitos == false) {
+                        return AlertDialog(
+                          title: Text('Erro ao cadastrar usuário!'),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Lottie.asset('assets/lotties/error.json'),
+                              Text(
+                                'Você precisa aceitar os termos para continuar!',
+                              ),
+                            ],
+                          ),
+                          actions: [
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: AppColors.secondaryColor,
+                                padding: EdgeInsets.symmetric(horizontal: 80),
+                              ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text(
+                                'Tente Novamente',
+                                style: TextStyle(
+                                  color: AppColors.primaryColor,
+                                  fontWeight: FontWeight.bold,
                                 ),
-                              );
-                            },
-                            child: Text(
-                              'Ir para a tela inicial',
-                              style: TextStyle(
-                                color: AppColors.primaryColor,
-                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ),
-                        ],
-                      );
+                          ],
+                        );
+                      } else {
+                        return AlertDialog(
+                          title: Text('Cadastro realizado com sucesso!'),
+                          content: Lottie.asset('assets/lotties/verified.json'),
+                          actions: [
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: AppColors.secondaryColor,
+                                padding: EdgeInsets.symmetric(horizontal: 80),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Home(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Ir para a tela inicial',
+                                style: TextStyle(
+                                  color: AppColors.primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      }
                     },
                   );
                 },

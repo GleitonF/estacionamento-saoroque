@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
-import 'package:lottie/lottie.dart';
 
 class IrregularidadesPendentes extends StatefulWidget {
   const IrregularidadesPendentes({super.key});
@@ -111,10 +110,10 @@ class _MyHomePageState extends State<IrregularidadesPendentes> {
               ),
             ),
             SizedBox(height: 50),
-            Text('Irregularidades Pendentes:', style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold
-            )),
+            Text(
+              'Irregularidades Pendentes:',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 30),
             Container(
               height: 63,
@@ -122,23 +121,14 @@ class _MyHomePageState extends State<IrregularidadesPendentes> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('16/03/25', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R. XV de Novembro', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('16/03/25', style: TextStyle(fontSize: 14)),
+                  Text('R. XV de Novembro', style: TextStyle(fontSize: 14)),
+                  Text('R\$ 5,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -149,23 +139,14 @@ class _MyHomePageState extends State<IrregularidadesPendentes> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/04/25', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('Av. Bandeirantes', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/04/25', style: TextStyle(fontSize: 14)),
+                  Text('Av. Bandeirantes', style: TextStyle(fontSize: 14)),
+                  Text('R\$ 5,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -176,23 +157,14 @@ class _MyHomePageState extends State<IrregularidadesPendentes> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/04/25', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('Av. Bandeirantes', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/04/25', style: TextStyle(fontSize: 14)),
+                  Text('Av. Bandeirantes', style: TextStyle(fontSize: 14)),
+                  Text('R\$ 5,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),

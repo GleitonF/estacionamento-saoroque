@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
+import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
 import 'package:lottie/lottie.dart';
 
 class Contato extends StatefulWidget {
@@ -35,97 +37,23 @@ class _MyHomePageState extends State<Contato> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(color: AppColors.primaryColor),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 5,
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: AppColors.secondaryColor,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.home_outlined,
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                      Text('Início'),
-                    ],
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Saldo()),
-                      );
-                    },
-                    child: Row(
-                      spacing: 5,
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: AppColors.secondaryColor,
-                          child: IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Saldo(),
-                                ),
-                              );
-                            },
-                            icon: Icon(
-                              Icons.savings,
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                        ),
-                        Text('Saldo'),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    spacing: 5,
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: AppColors.secondaryColor,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.refresh_outlined,
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                      Text('Historico'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            NavbarWidget(),
             SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Container(
-                height: 700,
-                decoration: BoxDecoration(
-                  color: AppColors.primaryColor
-                ),
+                decoration: BoxDecoration(color: AppColors.primaryColor),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Text('Contato', style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                      )),
+                      Text(
+                        'Contato',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       SizedBox(height: 30),
                       TextField(
                         decoration: InputDecoration(
@@ -150,14 +78,14 @@ class _MyHomePageState extends State<Contato> {
                         ),
                       ),
                       SizedBox(height: 40),
-                       TextField(
+                      TextField(
                         decoration: InputDecoration(
                           labelText: 'Assunto',
                           border: OutlineInputBorder(),
                         ),
                       ),
                       SizedBox(height: 40),
-                       TextField(
+                      TextField(
                         maxLines: 5,
                         decoration: InputDecoration(
                           labelText: 'Mensagem',
@@ -165,29 +93,81 @@ class _MyHomePageState extends State<Contato> {
                         ),
                       ),
                       SizedBox(height: 22),
-                      Container(
-                        height: 42,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: AppColors.secondaryColor,
-                          borderRadius: BorderRadius.circular(9)
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 30,
+                            vertical: 10,
+                          ),
+                          backgroundColor: AppColors.secondaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Enviar', style: TextStyle(
-                              color: AppColors.primaryColor,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold
-                            )),
-                          ],
+
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: Text('Mensagem enviada com sucesso!'),
+                                content: Lottie.asset(
+                                  'assets/lotties/check.json',
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => Home(),
+                                        ),
+                                        (route) => false,
+                                      );
+                                    },
+                                    child: Text('Ok'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: Text(
+                          'Enviar',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      )
+                      ),
+
+                      // Container(
+                      //   height: 42,
+                      //   width: 150,
+                      //   decoration: BoxDecoration(
+                      //     color: AppColors.secondaryColor,
+                      //     borderRadius: BorderRadius.circular(9),
+                      //   ),
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.center,
+                      //     children: [
+                      //       Text(
+                      //         'Enviar',
+                      //         style: TextStyle(
+                      //           color: AppColors.primaryColor,
+                      //           fontSize: 16,
+                      //           fontWeight: FontWeight.bold,
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
