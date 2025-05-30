@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/pages/cadastro_1.dart';
+import 'package:flutter_aplication_estacionamento/pages/politica.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key, required this.title});
@@ -178,12 +179,16 @@ class _MyHomePageState extends State<Login> {
               ),
               SizedBox(height: 30),
 
-              Text(
-                'Políticas de privacidade',
-                style: TextStyle(
-                  fontSize: 16,
-                  decoration: TextDecoration.underline,
-                ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Politica(),
+                    ),
+                  );
+                },
+                child: Text('Políticas de Privacidade', style: TextStyle(fontSize: 16)),
               ),
             ],
           ),

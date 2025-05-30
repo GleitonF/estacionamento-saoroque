@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: AppColors.backgroundColor),
-      home: const IrregularidadesPendentes(),
+      home: const Login(title: 'teste',),
     );
   }
 }
