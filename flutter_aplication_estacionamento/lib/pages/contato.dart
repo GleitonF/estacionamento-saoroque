@@ -110,22 +110,38 @@ class _MyHomePageState extends State<Contato> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: Text('Mensagem enviada com sucesso!'),
+                                title: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text('Mensagem enviada com'),
+                                    Text('sucesso!'),
+                                  ],
+                                ),
                                 content: Lottie.asset(
                                   'assets/lotties/check.json',
                                 ),
                                 actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => Home(),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      TextButton(
+                                        style: TextButton.styleFrom(
+                                          backgroundColor: AppColors.secondaryColor
                                         ),
-                                        (route) => false,
-                                      );
-                                    },
-                                    child: Text('Ok'),
+                                        onPressed: () {
+                                          Navigator.pushAndRemoveUntil(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => Home(),
+                                            ),
+                                            (route) => false,
+                                          );
+                                        },
+                                        child: Text('Ok', style: TextStyle(
+                                          color: AppColors.primaryColor
+                                        )),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               );

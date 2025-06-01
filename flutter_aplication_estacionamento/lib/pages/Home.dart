@@ -89,7 +89,7 @@ class _MyHomePageState extends State<Home> {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: AppColors.textColor,
+                                  color: Colors.black54,
                                 ),
                               ),
                               Text(
@@ -125,7 +125,7 @@ class _MyHomePageState extends State<Home> {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: AppColors.textColor,
+                                  color: Colors.black54,
                                 ),
                               ),
                               Text(
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<Home> {
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.textColor,
+                                      color: Colors.black54,
                                     ),
                                   ),
                                 ],
@@ -288,7 +288,7 @@ class _MyHomePageState extends State<Home> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: AppColors.textColor,
+                              color: Colors.black54,
                             ),
                           ),
                         ],
@@ -317,7 +317,7 @@ class _MyHomePageState extends State<Home> {
                                     style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.textColor,
+                                      color: Colors.black54,
                                     ),
                                   ),
                                   Text(
@@ -393,39 +393,48 @@ class _MyHomePageState extends State<Home> {
                                         context: context,
                                         builder: (context) {
                                           return AlertDialog(
-                                            title: Text(
-                                              'Veículo cadastrado com sucesso!',
+                                            title: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
+                                              children: [
+                                                Text('Veículo cadastrado com'),
+                                                Text('Sucesso!'),
+                                              ],
                                             ),
                                             content: Lottie.asset(
                                               'assets/lotties/verified.json',
                                             ),
                                             actions: [
-                                              TextButton(
-                                                style: TextButton.styleFrom(
-                                                  backgroundColor:
-                                                      AppColors.secondaryColor,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 80,
-                                                  ),
-                                                ),
-                                                onPressed: () {
-                                                  Navigator.pushAndRemoveUntil(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder:
-                                                          (context) => Home(),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  TextButton(
+                                                    style: TextButton.styleFrom(
+                                                      backgroundColor:
+                                                          AppColors.secondaryColor,
+                                                      padding: EdgeInsets.symmetric(
+                                                        horizontal: 80,
+                                                      ),
                                                     ),
-                                                    (route) => false,
-                                                  );
-                                                },
-                                                child: Text(
-                                                  'Ir para a tela inicial',
-                                                  style: TextStyle(
-                                                    color:
-                                                        AppColors.primaryColor,
-                                                    fontWeight: FontWeight.bold,
+                                                    onPressed: () {
+                                                      Navigator.pushAndRemoveUntil(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder:
+                                                              (context) => Home(),
+                                                        ),
+                                                        (route) => false,
+                                                      );
+                                                    },
+                                                    child: Text(
+                                                      'Ir para a tela inicial',
+                                                      style: TextStyle(
+                                                        color:
+                                                            AppColors.primaryColor,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
                                                   ),
-                                                ),
+                                                ],
                                               ),
                                             ],
                                           );

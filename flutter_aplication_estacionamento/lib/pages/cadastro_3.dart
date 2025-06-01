@@ -135,7 +135,12 @@ class _MyHomePageState extends State<Cadastro3> {
                     builder: (context) {
                       if (_termosAceitos == false) {
                         return AlertDialog(
-                          title: Text('Erro ao cadastrar usuário!'),
+                          title: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Erro ao cadastrar usuário!'),
+                            ],
+                          ),
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -146,49 +151,65 @@ class _MyHomePageState extends State<Cadastro3> {
                             ],
                           ),
                           actions: [
-                            TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor: AppColors.secondaryColor,
-                                padding: EdgeInsets.symmetric(horizontal: 80),
-                              ),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: Text(
-                                'Tente Novamente',
-                                style: TextStyle(
-                                  color: AppColors.primaryColor,
-                                  fontWeight: FontWeight.bold,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: AppColors.secondaryColor,
+                                    padding: EdgeInsets.symmetric(horizontal: 80),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    'Tente Novamente',
+                                    style: TextStyle(
+                                      color: AppColors.primaryColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ],
                         );
                       } else {
                         return AlertDialog(
-                          title: Text('Cadastro realizado com sucesso!'),
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text('Cadastro realizado com'),
+                              Text('sucesso!'),
+                            ],
+                          ),
                           content: Lottie.asset('assets/lotties/verified.json'),
                           actions: [
-                            TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor: AppColors.secondaryColor,
-                                padding: EdgeInsets.symmetric(horizontal: 80),
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Home(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: AppColors.secondaryColor,
+                                    padding: EdgeInsets.symmetric(horizontal: 80),
                                   ),
-                                );
-                              },
-                              child: Text(
-                                'Ir para a tela inicial',
-                                style: TextStyle(
-                                  color: AppColors.primaryColor,
-                                  fontWeight: FontWeight.bold,
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Home(),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'Ir para a tela inicial',
+                                    style: TextStyle(
+                                      color: AppColors.primaryColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ],
                         );

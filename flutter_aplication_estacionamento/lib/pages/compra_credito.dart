@@ -534,32 +534,46 @@ class _MyHomePageState extends State<CompraCredito> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Erro ao realzar o pagamento'),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Erro ao realzar o pagamento'),
+                          ],
+                        ),
                         content: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Lottie.asset('assets/lotties/error.json'),
-                            Text(
-                              'Selecione pelo menos uma forma de pagamento.',
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text('Selecione pelo menos uma forma de'),
+                                Text('pagamento'),
+                              ],
                             ),
                           ],
                         ),
                         actions: [
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: AppColors.secondaryColor,
-                              padding: EdgeInsets.symmetric(horizontal: 80),
-                            ),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text(
-                              'Tente Novamente',
-                              style: TextStyle(
-                                color: AppColors.primaryColor,
-                                fontWeight: FontWeight.bold,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: AppColors.secondaryColor,
+                                  padding: EdgeInsets.symmetric(horizontal: 80),
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  'Tente Novamente',
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ],
                       );
@@ -570,28 +584,39 @@ class _MyHomePageState extends State<CompraCredito> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Compra realizada com sucesso!'),
+                        title: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text('Compra realizada com'),
+                            Text('sucesso!'),
+                          ],
+                        ),
                         content: Lottie.asset('assets/lotties/verified.json'),
                         actions: [
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: AppColors.secondaryColor,
-                              padding: EdgeInsets.symmetric(horizontal: 80),
-                            ),
-                            onPressed: () {
-                              Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(builder: (context) => Home()),
-                                (route) => false,
-                              );
-                            },
-                            child: Text(
-                              'OK',
-                              style: TextStyle(
-                                color: AppColors.primaryColor,
-                                fontWeight: FontWeight.bold,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: AppColors.secondaryColor,
+                                  padding: EdgeInsets.symmetric(horizontal: 80),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Home()),
+                                    (route) => false,
+                                  );
+                                },
+                                child: Text(
+                                  'OK',
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ],
                       );
