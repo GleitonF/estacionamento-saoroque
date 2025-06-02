@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
+import 'package:flutter_aplication_estacionamento/widgets/error_modal.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
+import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
 import 'package:lottie/lottie.dart';
 
 class CompraCredito extends StatefulWidget {
@@ -533,49 +535,9 @@ class _MyHomePageState extends State<CompraCredito> {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Erro ao realzar o pagamento'),
-                          ],
-                        ),
-                        content: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Lottie.asset('assets/lotties/error.json'),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text('Selecione pelo menos uma forma de'),
-                                Text('pagamento'),
-                              ],
-                            ),
-                          ],
-                        ),
-                        actions: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              TextButton(
-                                style: TextButton.styleFrom(
-                                  backgroundColor: AppColors.secondaryColor,
-                                  padding: EdgeInsets.symmetric(horizontal: 80),
-                                ),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Text(
-                                  'Tente Novamente',
-                                  style: TextStyle(
-                                    color: AppColors.primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                      return ErrorModal(
+                        title: 'Erro ao realizar o pagamento',
+                        subtitle: 'Selecione pelo menos uma forma de pagamento',
                       );
                     },
                   );
@@ -583,43 +545,10 @@ class _MyHomePageState extends State<CompraCredito> {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text('Compra realizada com'),
-                            Text('sucesso!'),
-                          ],
-                        ),
-                        content: Lottie.asset('assets/lotties/verified.json'),
-                        actions: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              TextButton(
-                                style: TextButton.styleFrom(
-                                  backgroundColor: AppColors.secondaryColor,
-                                  padding: EdgeInsets.symmetric(horizontal: 80),
-                                ),
-                                onPressed: () {
-                                  Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Home()),
-                                    (route) => false,
-                                  );
-                                },
-                                child: Text(
-                                  'OK',
-                                  style: TextStyle(
-                                    color: AppColors.primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                      return VerifiedModal(
+                        title: 'Compra realizada com sucesso!',
                       );
+
                     },
                   );
                 }

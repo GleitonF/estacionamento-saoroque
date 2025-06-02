@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/pages/cadastro_1.dart';
 import 'package:flutter_aplication_estacionamento/pages/politica.dart';
@@ -25,7 +26,7 @@ class _MyHomePageState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFEBDEF4),
+      backgroundColor: AppColors.backgroundColor,
 
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30),
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<Login> {
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xcc6B088C),
+                    color: AppColors.secondaryColor,
                     borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<Login> {
                     children: [
                       Icon(
                         Icons.alarm,
-                        color: Color(0xcc6B088C),
+                        color: AppColors.secondaryColor,
                       ), //não consegui baixar a imagem do Google, vejam se vocês conseguem pegar do figma
                       SizedBox(width: 15),
                       Text(

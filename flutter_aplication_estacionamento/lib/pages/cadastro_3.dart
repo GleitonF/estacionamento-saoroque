@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/widgets/error_modal.dart';
+import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
 import 'package:lottie/lottie.dart';
 
 class Cadastro3 extends StatefulWidget {
@@ -18,7 +20,7 @@ class _MyHomePageState extends State<Cadastro3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFEBDEF4),
+      backgroundColor: AppColors.backgroundColor,
 
       body: Padding(
         padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
@@ -32,7 +34,7 @@ class _MyHomePageState extends State<Cadastro3> {
                 value: 1,
                 minHeight: 10,
                 backgroundColor: Colors.purple[100],
-                valueColor: AlwaysStoppedAnimation<Color>(Color(0xcc6B088C)),
+                valueColor: AlwaysStoppedAnimation<Color>(AppColors.secondaryColor,),
                 borderRadius: BorderRadius.circular(10),
               ),
               SizedBox(height: 10),
@@ -115,7 +117,7 @@ class _MyHomePageState extends State<Cadastro3> {
                           _termosAceitos = value ?? false;
                         });
                       },
-                      activeColor: Color(0xcc6B088C),
+                      activeColor: AppColors.secondaryColor,
                     ),
                     Expanded(
                       child: Text(
@@ -134,84 +136,14 @@ class _MyHomePageState extends State<Cadastro3> {
                     context: context,
                     builder: (context) {
                       if (_termosAceitos == false) {
-                        return AlertDialog(
-                          title: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('Erro ao cadastrar usuário!'),
-                            ],
-                          ),
-                          content: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Lottie.asset('assets/lotties/error.json'),
-                              Text(
-                                'Você precisa aceitar os termos para continuar!',
-                              ),
-                            ],
-                          ),
-                          actions: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    backgroundColor: AppColors.secondaryColor,
-                                    padding: EdgeInsets.symmetric(horizontal: 80),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text(
-                                    'Tente Novamente',
-                                    style: TextStyle(
-                                      color: AppColors.primaryColor,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                        return ErrorModal(
+                          title: 'Erro ao cadastrar usuário',
+                          subtitle:
+                              'Você precisa aceitar os termos de uso para continuar',
                         );
                       } else {
-                        return AlertDialog(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('Cadastro realizado com'),
-                              Text('sucesso!'),
-                            ],
-                          ),
-                          content: Lottie.asset('assets/lotties/verified.json'),
-                          actions: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    backgroundColor: AppColors.secondaryColor,
-                                    padding: EdgeInsets.symmetric(horizontal: 80),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => Home(),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'Ir para a tela inicial',
-                                    style: TextStyle(
-                                      color: AppColors.primaryColor,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                        return VerifiedModal(
+                          title: 'Usuário cadastrado com sucesso',
                         );
                       }
                     },
@@ -248,7 +180,7 @@ class _MyHomePageState extends State<Cadastro3> {
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xcc6B088C),
+                    color: AppColors.secondaryColor,
                     borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(

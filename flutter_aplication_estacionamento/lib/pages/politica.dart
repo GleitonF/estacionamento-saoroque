@@ -16,27 +16,9 @@ class _MyHomePageState extends State<Politica> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerWidget(
-        backgroundColor: AppColors.primaryColor,
-        child: ListView(),
-      ),
-      appBar: AppBar(
-        backgroundColor: AppColors.primaryColor,
-        title: Text(
-          'Políticas de Privacidade',
-          style: TextStyle(
-            color: AppColors.secondaryColor,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-        iconTheme: IconThemeData(color: AppColors.secondaryColor),
-      ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
           children: [
-            NavbarWidget(),
             SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.all(20),
@@ -44,83 +26,108 @@ class _MyHomePageState extends State<Politica> {
                 height: 730,
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Text('Políticas de Privacidade', style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                      Text(
+                        'Políticas de Privacidade',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       SizedBox(height: 30),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
-                      Text('Lorem ipsum dolor sit amet. Sed maiores ', style: TextStyle(
-                        fontSize: 16,
-                      )),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet. Sed maiores ',
+                        style: TextStyle(fontSize: 16),
+                      ),
                       SizedBox(height: 60),
                       GestureDetector(
                         onTap: () {
@@ -131,20 +138,23 @@ class _MyHomePageState extends State<Politica> {
                           width: 280,
                           decoration: BoxDecoration(
                             color: AppColors.secondaryColor,
-                            borderRadius: BorderRadius.circular(9)
+                            borderRadius: BorderRadius.circular(9),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('Voltar', style: TextStyle(
-                                fontSize: 20,
-                                color: AppColors.primaryColor,
-                                fontWeight: FontWeight.bold
-                              ),)
+                              Text(
+                                'Voltar',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: AppColors.primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ],
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

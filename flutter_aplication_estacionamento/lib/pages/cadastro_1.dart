@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/cadastro_2.dart';
 
 class Cadastro1 extends StatefulWidget {
@@ -16,7 +17,7 @@ class _MyHomePageState extends State<Cadastro1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFFEBDEF4),
+      backgroundColor: AppColors.backgroundColor,
 
       body: Padding(
         padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
@@ -31,7 +32,7 @@ class _MyHomePageState extends State<Cadastro1> {
                 value: 0.3,
                 minHeight: 10,
                 backgroundColor: Colors.purple[100],
-                valueColor: AlwaysStoppedAnimation<Color>(Color(0xcc6B088C)),
+                valueColor: AlwaysStoppedAnimation<Color>(AppColors.secondaryColor),
                 borderRadius: BorderRadius.circular(10),
               ),
               SizedBox(height: 10),
@@ -89,7 +90,7 @@ class _MyHomePageState extends State<Cadastro1> {
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xcc6B088C),
+                    color: AppColors.secondaryColor,
                     borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(
@@ -116,7 +117,7 @@ class _MyHomePageState extends State<Cadastro1> {
                   height: 42,
                   width: 280,
                   decoration: BoxDecoration(
-                    color: Color(0xcc6B088C),
+                    color: AppColors.secondaryColor,
                     borderRadius: BorderRadius.circular(9),
                   ),
                   child: Row(

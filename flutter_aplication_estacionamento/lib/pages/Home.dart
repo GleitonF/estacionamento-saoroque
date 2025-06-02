@@ -3,6 +3,7 @@ import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
+import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
 import 'package:lottie/lottie.dart';
 
 class Home extends StatefulWidget {
@@ -392,51 +393,9 @@ class _MyHomePageState extends State<Home> {
                                       showDialog(
                                         context: context,
                                         builder: (context) {
-                                          return AlertDialog(
-                                            title: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.center,
-                                              children: [
-                                                Text('Veículo cadastrado com'),
-                                                Text('Sucesso!'),
-                                              ],
-                                            ),
-                                            content: Lottie.asset(
-                                              'assets/lotties/verified.json',
-                                            ),
-                                            actions: [
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  TextButton(
-                                                    style: TextButton.styleFrom(
-                                                      backgroundColor:
-                                                          AppColors.secondaryColor,
-                                                      padding: EdgeInsets.symmetric(
-                                                        horizontal: 80,
-                                                      ),
-                                                    ),
-                                                    onPressed: () {
-                                                      Navigator.pushAndRemoveUntil(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder:
-                                                              (context) => Home(),
-                                                        ),
-                                                        (route) => false,
-                                                      );
-                                                    },
-                                                    child: Text(
-                                                      'Ir para a tela inicial',
-                                                      style: TextStyle(
-                                                        color:
-                                                            AppColors.primaryColor,
-                                                        fontWeight: FontWeight.bold,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
+                                          return VerifiedModal(
+                                            title:
+                                                'Veículo cadastrado com sucesso!',
                                           );
                                         },
                                       );
