@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/Home.dart';
-import 'package:flutter_aplication_estacionamento/pages/cadastro_1.dart';
-import 'package:flutter_aplication_estacionamento/pages/politica.dart';
+import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
+import 'package:flutter_aplication_estacionamento/pages/cadastro/cadastro_1.dart';
+import 'package:flutter_aplication_estacionamento/pages/login/politica.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key, required this.title});

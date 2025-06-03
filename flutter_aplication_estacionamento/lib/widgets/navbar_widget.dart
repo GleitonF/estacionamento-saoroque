@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/Home.dart';
-import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
+import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
+import 'package:flutter_aplication_estacionamento/pages/saldo/saldo.dart';
 
 class NavbarWidget extends StatelessWidget {
   const NavbarWidget({super.key});
@@ -15,7 +15,12 @@ class NavbarWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
             child: Row(
               spacing: 5,
               children: [

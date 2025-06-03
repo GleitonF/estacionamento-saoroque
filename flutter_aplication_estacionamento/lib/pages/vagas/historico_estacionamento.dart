@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/saldo.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
 
-class HistoricoSaldo extends StatefulWidget {
-  const HistoricoSaldo({super.key});
+class HistoricoEstacionamento extends StatefulWidget {
+  const HistoricoEstacionamento({super.key});
 
   @override
-  State<HistoricoSaldo> createState() => _MyHomePageState();
+  State<HistoricoEstacionamento> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<HistoricoSaldo> {
+class _MyHomePageState extends State<HistoricoEstacionamento> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,7 @@ class _MyHomePageState extends State<HistoricoSaldo> {
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         title: Text(
-          'Histórico de Crédito',
+          'Histórico',
           style: TextStyle(
             color: AppColors.secondaryColor,
             fontSize: 16,

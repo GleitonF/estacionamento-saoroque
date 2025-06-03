@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
+import 'package:flutter_aplication_estacionamento/pages/saldo/compra_credito.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
 import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
-import 'package:lottie/lottie.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

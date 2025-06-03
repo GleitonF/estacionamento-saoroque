@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aplication_estacionamento/pages/Home.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/widgets/error_modal.dart';
 import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
-import 'package:lottie/lottie.dart';
 
 class Cadastro3 extends StatefulWidget {
   const Cadastro3({super.key, required this.title});

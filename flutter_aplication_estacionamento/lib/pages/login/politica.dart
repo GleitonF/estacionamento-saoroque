@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
-import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
-import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
-import 'package:lottie/lottie.dart';
+
 
 class Politica extends StatefulWidget {
   const Politica({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
-import 'package:flutter_aplication_estacionamento/pages/cadastro_2.dart';
+import 'package:flutter_aplication_estacionamento/pages/cadastro/cadastro_2.dart';
 
 class Cadastro1 extends StatefulWidget {
   const Cadastro1({super.key, required this.title});

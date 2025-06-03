@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/_core/custom_tile.dart';
-import 'package:flutter_aplication_estacionamento/pages/Home.dart';
-import 'package:flutter_aplication_estacionamento/pages/mapa.dart';
-import 'package:flutter_aplication_estacionamento/pages/vagas.dart';
-import 'package:flutter_aplication_estacionamento/pages/historico_estacionamento.dart';
-import 'package:flutter_aplication_estacionamento/pages/historico_saldo.dart';
-import 'package:flutter_aplication_estacionamento/pages/compra_credito.dart';
-import 'package:flutter_aplication_estacionamento/pages/irregularidades_pendentes.dart';
-import 'package:flutter_aplication_estacionamento/pages/historico_irregularidades.dart';
-import 'package:flutter_aplication_estacionamento/pages/contato.dart';
-import 'package:flutter_aplication_estacionamento/pages/login.dart';
+import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
+import 'package:flutter_aplication_estacionamento/pages/vagas/mapa.dart';
+import 'package:flutter_aplication_estacionamento/pages/vagas/vagas.dart';
+import 'package:flutter_aplication_estacionamento/pages/vagas/historico_estacionamento.dart';
+import 'package:flutter_aplication_estacionamento/pages/saldo/historico_saldo.dart';
+import 'package:flutter_aplication_estacionamento/pages/saldo/compra_credito.dart';
+import 'package:flutter_aplication_estacionamento/pages/irregularidades/irregularidades_pendentes.dart';
+import 'package:flutter_aplication_estacionamento/pages/irregularidades/historico_irregularidades.dart';
+import 'package:flutter_aplication_estacionamento/pages/contato/contato.dart';
+import 'package:flutter_aplication_estacionamento/pages/login/login.dart';
 
 
 class DrawerWidget extends StatefulWidget {
