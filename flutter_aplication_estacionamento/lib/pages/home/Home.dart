@@ -37,7 +37,7 @@ class _MyHomePageState extends State<Home> {
         child: Column(
           children: [
             NavbarWidget(),
-            SizedBox(height: 50),
+            SizedBox(height: 10),
             // primeiro container
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -63,7 +63,11 @@ class _MyHomePageState extends State<Home> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Avisos',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black54,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -145,7 +149,7 @@ class _MyHomePageState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 10),
             // segundo container
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -170,7 +174,7 @@ class _MyHomePageState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 180, top: 20),
+                            padding: const EdgeInsets.only(left: 125, top: 20),
                             child: Expanded(
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -192,10 +196,10 @@ class _MyHomePageState extends State<Home> {
                             'Seu saldo atual de créditos para uso.',
                             style: TextStyle(color: AppColors.textColor),
                           ),
-                          SizedBox(height: 30),
+                          SizedBox(height: 25),
                           Row(
                             children: [
-                              SizedBox(width: 90),
+                              SizedBox(width: 70),
                               TextButton(
                                 style: TextButton.styleFrom(
                                   padding: EdgeInsets.all(10),
@@ -225,9 +229,9 @@ class _MyHomePageState extends State<Home> {
                           ),
                         ],
                       ),
-                      SizedBox(width: 20),
+                      SizedBox(width: 10),
                       VerticalDivider(),
-                      SizedBox(width: 5),
+                      SizedBox(width: 1),
                       CircleAvatar(
                         backgroundColor: AppColors.secondaryColor,
                         radius: 30,
@@ -256,7 +260,7 @@ class _MyHomePageState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
@@ -281,12 +285,12 @@ class _MyHomePageState extends State<Home> {
                         top: 8,
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Cadastro',
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black54,
                             ),
