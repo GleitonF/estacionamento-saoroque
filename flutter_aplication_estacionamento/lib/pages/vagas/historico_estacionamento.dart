@@ -39,22 +39,22 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('Data', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Valor', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Tempo', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Total', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
+                Text(
+                  'Data',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Valor',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Tempo',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Total',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ],
             ),
             SizedBox(height: 30),
@@ -64,26 +64,15 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/03/2025', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$2,00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('1:00:00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$40,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/03/2025', style: TextStyle(fontSize: 14)),
+                  Text('R\$2,00', style: TextStyle(fontSize: 14)),
+                  Text('1:00:00', style: TextStyle(fontSize: 14)),
+                  Text('R\$40,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -94,26 +83,15 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/04/2025', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$2,00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('1:00:00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$38,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/04/2025', style: TextStyle(fontSize: 14)),
+                  Text('R\$2,00', style: TextStyle(fontSize: 14)),
+                  Text('1:00:00', style: TextStyle(fontSize: 14)),
+                  Text('R\$38,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -124,26 +102,15 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('16/05/2025', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$6,00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('3:00:00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$32,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('16/05/2025', style: TextStyle(fontSize: 14)),
+                  Text('R\$6,00', style: TextStyle(fontSize: 14)),
+                  Text('3:00:00', style: TextStyle(fontSize: 14)),
+                  Text('R\$32,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -154,26 +121,15 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/06/2025', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$2,00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('1:00:00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$20,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/06/2025', style: TextStyle(fontSize: 14)),
+                  Text('R\$2,00', style: TextStyle(fontSize: 14)),
+                  Text('1:00:00', style: TextStyle(fontSize: 14)),
+                  Text('R\$20,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -184,26 +140,15 @@ class _MyHomePageState extends State<HistoricoEstacionamento> {
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: AppColors.secondaryColor,
-                  width: 2.0
-                )
+                border: Border.all(color: AppColors.secondaryColor, width: 2.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('29/06/2025', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$2,00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('1:00:00', style: TextStyle(
-                    fontSize: 14
-                  )),
-                  Text('R\$18,00', style: TextStyle(
-                    fontSize: 14
-                  )),
+                  Text('29/06/2025', style: TextStyle(fontSize: 14)),
+                  Text('R\$2,00', style: TextStyle(fontSize: 14)),
+                  Text('1:00:00', style: TextStyle(fontSize: 14)),
+                  Text('R\$18,00', style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),

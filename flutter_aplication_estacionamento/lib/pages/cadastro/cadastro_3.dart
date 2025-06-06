@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
 import 'package:flutter_aplication_estacionamento/widgets/error_modal.dart';
 import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
 
@@ -32,7 +33,9 @@ class _MyHomePageState extends State<Cadastro3> {
                 value: 1,
                 minHeight: 10,
                 backgroundColor: Colors.purple[100],
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.secondaryColor,),
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  AppColors.secondaryColor,
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
               SizedBox(height: 10),
@@ -142,6 +145,13 @@ class _MyHomePageState extends State<Cadastro3> {
                       } else {
                         return VerifiedModal(
                           title: 'Usuário cadastrado com sucesso',
+                          navigation: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          },
+                          confirm: 'Começar',
                         );
                       }
                     },

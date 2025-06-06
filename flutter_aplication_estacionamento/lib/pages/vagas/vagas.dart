@@ -5,7 +5,6 @@ import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
 import 'package:flutter_aplication_estacionamento/widgets/verified_modal.dart';
 
-
 class Vagas extends StatefulWidget {
   const Vagas({super.key});
 
@@ -128,7 +127,7 @@ class _MyHomePageState extends State<Vagas> {
                                       ),
                                       content: Row(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           TextButton(
                                             style: TextButton.styleFrom(
@@ -475,7 +474,14 @@ class _MyHomePageState extends State<Vagas> {
                                     showDialog(
                                       context: context,
                                       builder: (context) {
-                                        return VerifiedModal(title: 'Estacionamento ativado com sucesso!');
+                                        return VerifiedModal(
+                                          title:
+                                              'Estacionamento ativado com sucesso!',
+                                          navigation: () {
+                                            Navigator.pop(context);
+                                          },
+                                          confirm: 'Voltar',
+                                        );
                                       },
                                     );
                                   },

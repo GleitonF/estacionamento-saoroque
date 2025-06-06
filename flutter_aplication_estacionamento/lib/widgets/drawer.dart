@@ -11,7 +11,7 @@ import 'package:flutter_aplication_estacionamento/pages/irregularidades/irregula
 import 'package:flutter_aplication_estacionamento/pages/irregularidades/historico_irregularidades.dart';
 import 'package:flutter_aplication_estacionamento/pages/contato/contato.dart';
 import 'package:flutter_aplication_estacionamento/pages/login/login.dart';
-import 'package:flutter_aplication_estacionamento/pages/cadastro/atualizar_cadastro.dart';
+import 'package:flutter_aplication_estacionamento/pages/dados_pessoais/dados_pessoais.dart';
 
 
 class DrawerWidget extends StatefulWidget {
@@ -122,7 +122,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: Text('DADOS PESSOAIS'),
             onTap: () {
               Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const AtualizarCadastro()));
+              MaterialPageRoute(builder: (context) => const DadosPessoais()));
             },
           ),
           ListTile(

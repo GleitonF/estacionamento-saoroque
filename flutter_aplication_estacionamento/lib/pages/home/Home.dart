@@ -399,6 +399,16 @@ class _MyHomePageState extends State<Home> {
                                           return VerifiedModal(
                                             title:
                                                 'Veículo cadastrado com sucesso!',
+                                            navigation: () {
+                                              Navigator.pushAndRemoveUntil(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => Home(),
+                                                ),
+                                                (route) => false,
+                                              );
+                                            },
+                                            confirm: 'Voltar',
                                           );
                                         },
                                       );

@@ -96,6 +96,33 @@ class _MyHomePageState extends State<Login> {
                   ),
                 ),
               ),
+              SizedBox(height: 40),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: AppColors.primaryColor,
+                  padding: EdgeInsets.symmetric(horizontal: 85, vertical: 8),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(color: AppColors.secondaryColor, width: 2),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Cadastro1(title: 'teste'),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Cadastre-se',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: AppColors.secondaryColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
               SizedBox(height: 35),
               Container(
                 width: 280,
@@ -167,29 +194,19 @@ class _MyHomePageState extends State<Login> {
               ),
               SizedBox(height: 30),
 
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Cadastro1(title: 'teste'),
-                    ),
-                  );
-                },
-                child: Text('Cadastre-se', style: TextStyle(fontSize: 16)),
-              ),
               SizedBox(height: 30),
 
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => Politica(),
-                    ),
+                    MaterialPageRoute(builder: (context) => Politica()),
                   );
                 },
-                child: Text('Políticas de Privacidade', style: TextStyle(fontSize: 16)),
+                child: Text(
+                  'Políticas de Privacidade',
+                  style: TextStyle(fontSize: 16),
+                ),
               ),
             ],
           ),

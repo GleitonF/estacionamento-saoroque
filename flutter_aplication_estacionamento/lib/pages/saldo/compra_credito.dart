@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
+import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
 import 'package:flutter_aplication_estacionamento/widgets/drawer.dart';
 import 'package:flutter_aplication_estacionamento/widgets/error_modal.dart';
 import 'package:flutter_aplication_estacionamento/widgets/navbar_widget.dart';
@@ -142,7 +143,7 @@ class _MyHomePageState extends State<CompraCredito> {
                         title: Text('Cartão de crédito'),
                         value: 'cartaoCredito',
                         groupValue: formaPagamentoSelecionada,
-                        activeColor: Color(0xcc6B088C),
+                        activeColor: AppColors.secondaryColor,
                         onChanged: (value) {
                           setState(() {
                             formaPagamentoSelecionada = value;
@@ -153,7 +154,7 @@ class _MyHomePageState extends State<CompraCredito> {
                         title: Text('Pix'),
                         value: 'pix',
                         groupValue: formaPagamentoSelecionada,
-                        activeColor: Color(0xcc6B088C),
+                        activeColor: AppColors.secondaryColor,
                         onChanged: (value) {
                           setState(() {
                             formaPagamentoSelecionada = value;
@@ -164,7 +165,7 @@ class _MyHomePageState extends State<CompraCredito> {
                         title: Text('Boleto'),
                         value: 'boleto',
                         groupValue: formaPagamentoSelecionada,
-                        activeColor: Color(0xcc6B088C),
+                        activeColor: AppColors.secondaryColor,
                         onChanged: (value) {
                           setState(() {
                             formaPagamentoSelecionada = value;
@@ -175,7 +176,7 @@ class _MyHomePageState extends State<CompraCredito> {
                         title: Text('Cartão de débito'),
                         value: 'cartaoDebito',
                         groupValue: formaPagamentoSelecionada,
-                        activeColor: Color(0xcc6B088C),
+                        activeColor: AppColors.secondaryColor,
                         onChanged: (value) {
                           setState(() {
                             formaPagamentoSelecionada = value;
@@ -186,7 +187,7 @@ class _MyHomePageState extends State<CompraCredito> {
                         title: Text('Google Play'),
                         value: 'googlePlay',
                         groupValue: formaPagamentoSelecionada,
-                        activeColor: Color(0xcc6B088C),
+                        activeColor: AppColors.secondaryColor,
                         onChanged: (value) {
                           setState(() {
                             formaPagamentoSelecionada = value;
@@ -221,10 +222,21 @@ class _MyHomePageState extends State<CompraCredito> {
                               );
                             } else {
                               showDialog(
+                                barrierDismissible: false,
                                 context: context,
                                 builder: (BuildContext context) {
                                   return VerifiedModal(
                                     title: 'Compra realizada com sucesso!',
+                                    navigation: () {
+                                      Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => Home(),
+                                        ),
+                                        (route) => false,
+                                      );
+                                    },
+                                    confirm: 'Voltar',
                                   );
                                 },
                               );
