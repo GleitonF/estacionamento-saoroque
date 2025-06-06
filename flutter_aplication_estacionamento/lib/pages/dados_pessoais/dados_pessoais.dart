@@ -1027,10 +1027,38 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                     icon: Icon(Icons.edit_note, size: 40),
                                     color: AppColors.primaryColor,
                                   ),
-                                  Icon(
-                                    Icons.delete,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return QuestModal(
+                                            text:
+                                                'Tem certeza de que deseja remover este veículo?',
+                                            navigation: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return VerifiedModal(
+                                                    title:
+                                                        'Veículo removido com sucesso!',
+                                                    navigation: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    confirm: 'Voltar',
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1125,7 +1153,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                       builder: (context) {
                                                         return QuestModal(
                                                           text:
-                                                              'Tem certeza de que as informações estão corretas?',
+                                                              'Tem certeza de que deseja remover este veículo?',
                                                           navigation: () {
                                                             showDialog(
                                                               context: context,
@@ -1134,7 +1162,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                               ) {
                                                                 return VerifiedModal(
                                                                   title:
-                                                                      'Placa alterada com sucesso!',
+                                                                      'Veículo alterado com sucesso!',
                                                                   navigation: () {
                                                                     Navigator.pop(
                                                                       context,
@@ -1178,9 +1206,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                           ),
                                                     ),
                                                   ),
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                  },
+                                                  onPressed: () {},
                                                   child: Text(
                                                     'Cancelar',
                                                     style: TextStyle(
@@ -1204,10 +1230,38 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                       size: 40,
                                     ),
                                   ),
-                                  Icon(
-                                    Icons.delete,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return QuestModal(
+                                            text:
+                                                'Tem certeza de que deseja remover este veículo?',
+                                            navigation: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return VerifiedModal(
+                                                    title:
+                                                        'Veículo removido com sucesso!',
+                                                    navigation: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    confirm: 'Voltar',
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1381,15 +1435,174 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                               ),
                               Row(
                                 children: [
-                                  Icon(
-                                    Icons.edit_note,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog(
+                                            title: Text(
+                                              'Editar Número de Telefone',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            content: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                SizedBox(height: 10),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'Insira seu novo número',
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(height: 10),
+                                                TextFormField(
+                                                  keyboardType:
+                                                      TextInputType.number,
+                                                  decoration: InputDecoration(
+                                                    border:
+                                                        OutlineInputBorder(),
+                                                  ),
+                                                ),
+                                                SizedBox(height: 20),
+                                                TextButton(
+                                                  style: TextButton.styleFrom(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                          horizontal: 15,
+                                                        ),
+                                                    backgroundColor:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            5,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  onPressed: () {
+                                                    showDialog(
+                                                      context: context,
+                                                      builder: (context) {
+                                                        return QuestModal(
+                                                          text:
+                                                              'Tem certeza de que alterar seu telefone?',
+                                                          navigation: () {
+                                                            showDialog(
+                                                              context: context,
+                                                              builder: (
+                                                                context,
+                                                              ) {
+                                                                return VerifiedModal(
+                                                                  title:
+                                                                      'Telefone alterado com sucesso!',
+                                                                  navigation: () {
+                                                                    Navigator.pop(
+                                                                      context,
+                                                                    );
+                                                                  },
+                                                                  confirm:
+                                                                      'Voltar',
+                                                                );
+                                                              },
+                                                            );
+                                                          },
+                                                        );
+                                                      },
+                                                    );
+                                                  },
+                                                  child: Text(
+                                                    'Confirmar',
+                                                    style: TextStyle(
+                                                      color:
+                                                          AppColors
+                                                              .primaryColor,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(height: 10),
+                                                TextButton(
+                                                  style: TextButton.styleFrom(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                          horizontal: 19,
+                                                        ),
+                                                    backgroundColor:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            5,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text(
+                                                    'Cancelar',
+                                                    style: TextStyle(
+                                                      color:
+                                                          AppColors
+                                                              .primaryColor,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.edit_note,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
-                                  Icon(
-                                    Icons.delete,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return QuestModal(
+                                            text:
+                                                'Tem certeza de que deseja remover este telefone?',
+                                            navigation: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return VerifiedModal(
+                                                    title:
+                                                        'Telefone removido com sucesso!',
+                                                    navigation: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    confirm: 'Voltar',
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1423,15 +1636,172 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                               ),
                               Row(
                                 children: [
-                                  Icon(
-                                    Icons.edit_note,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog(
+                                            title: Text(
+                                              'Editar Placa do Veículo',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            content: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                SizedBox(height: 10),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'Insira a Placa do Veículo',
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(height: 10),
+                                                TextFormField(
+                                                  decoration: InputDecoration(
+                                                    border:
+                                                        OutlineInputBorder(),
+                                                  ),
+                                                ),
+                                                SizedBox(height: 20),
+                                                TextButton(
+                                                  style: TextButton.styleFrom(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                          horizontal: 15,
+                                                        ),
+                                                    backgroundColor:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            5,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  onPressed: () {
+                                                    showDialog(
+                                                      context: context,
+                                                      builder: (context) {
+                                                        return QuestModal(
+                                                          text:
+                                                              'Tem certeza de que as informações estão corretas?',
+                                                          navigation: () {
+                                                            showDialog(
+                                                              context: context,
+                                                              builder: (
+                                                                context,
+                                                              ) {
+                                                                return VerifiedModal(
+                                                                  title:
+                                                                      'Placa alterada com sucesso!',
+                                                                  navigation: () {
+                                                                    Navigator.pop(
+                                                                      context,
+                                                                    );
+                                                                  },
+                                                                  confirm:
+                                                                      'Voltar',
+                                                                );
+                                                              },
+                                                            );
+                                                          },
+                                                        );
+                                                      },
+                                                    );
+                                                  },
+                                                  child: Text(
+                                                    'Confirmar',
+                                                    style: TextStyle(
+                                                      color:
+                                                          AppColors
+                                                              .primaryColor,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(height: 10),
+                                                TextButton(
+                                                  style: TextButton.styleFrom(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                          horizontal: 19,
+                                                        ),
+                                                    backgroundColor:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            5,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text(
+                                                    'Cancelar',
+                                                    style: TextStyle(
+                                                      color:
+                                                          AppColors
+                                                              .primaryColor,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.edit_note,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
-                                  Icon(
-                                    Icons.delete,
-                                    color: AppColors.primaryColor,
-                                    size: 40,
+                                  IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return QuestModal(
+                                            text:
+                                                'Tem certeza de que deseja remover este telefone?',
+                                            navigation: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return VerifiedModal(
+                                                    title:
+                                                        'Telefone removido com sucesso!',
+                                                    navigation: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    confirm: 'Voltar',
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: AppColors.primaryColor,
+                                      size: 40,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1440,25 +1810,122 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                         ),
                       ),
                       SizedBox(height: 30),
-                      Container(
-                        height: 42,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: AppColors.secondaryColor,
-                          borderRadius: BorderRadius.circular(9),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: AppColors.secondaryColor,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 10,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Novo telefone',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: AppColors.primaryColor,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: Text(
+                                  'Cadastro de Telefone',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    SizedBox(height: 10),
+                                    Row(
+                                      children: [
+                                        Text('Insira o Número de Telefone'),
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    TextFormField(
+                                      keyboardType: TextInputType.number,
+                                      decoration: InputDecoration(
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20),
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 15,
+                                        ),
+                                        backgroundColor:
+                                            AppColors.secondaryColor,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            5,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return VerifiedModal(
+                                              title:
+                                                  'Telefone cadastrado com sucesso!',
+                                              navigation: () {
+                                                Navigator.pop(context);
+                                              },
+                                              confirm: 'Voltar',
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Text(
+                                        'Confirmar',
+                                        style: TextStyle(
+                                          color: AppColors.primaryColor,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 19,
+                                        ),
+                                        backgroundColor:
+                                            AppColors.secondaryColor,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            5,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text(
+                                        'Cancelar',
+                                        style: TextStyle(
+                                          color: AppColors.primaryColor,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        },
+
+                        child: Text(
+                          'Novo Telefone',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ],

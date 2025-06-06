@@ -85,7 +85,7 @@ class _MyHomePageState extends State<Login> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Próximo',
+                        'Entrar',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
