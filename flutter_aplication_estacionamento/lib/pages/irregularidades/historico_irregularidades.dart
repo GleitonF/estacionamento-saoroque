@@ -35,31 +35,9 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
         child: Column(
           children: [
             NavbarWidget(),
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text('Data', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Rua', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Descrição', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-                Text('Valor', style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold
-                )),
-              ],
-            ),
-            SizedBox(height: 20),
+            SizedBox(height: 25),
             Container(
-              height: 63,
+              height: 140,
               width: 380,
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
@@ -69,35 +47,28 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                   width: 2.0
                 )
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('16/03/25', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Text('XV de Novembro', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Utilização de vaga', style: TextStyle(
-                        fontSize: 11
-                      )),
-                      Text('sem ticket ativo', style: TextStyle(
-                        fontSize: 11
-                      )),
-                    ],
-                  ),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 11
-                  )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                      Text('   Regularizado', style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold),),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('   Placa        : EXZ-3345\n   Data         : 16/03/25\n   Endereço : Rua Monteiro Lobato\n   Descricao: Estacionar sem ticket\n   Valor        : R\$ 5,00', ),
+                        Text('\nok'),
+                      ],
+                    ),                 
                 ],
               ),
             ),
             SizedBox(height: 20),
             Container(
-              height: 63,
+              height: 140,
               width: 380,
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
@@ -107,35 +78,27 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                   width: 2.0
                 )
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('12/05/25', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Text('Padre Marçal', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Utilização de vaga', style: TextStyle(
-                        fontSize: 11
-                      )),
-                      Text('sem ticket ativo', style: TextStyle(
-                        fontSize: 11
-                      )),
-                    ],
-                  ),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 11
-                  )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                      Text('   Pendente', style:TextStyle(color:const Color.fromARGB(255, 253, 195, 2),fontWeight:FontWeight.bold),),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('   Placa        : kyx-2345\n   Data         : 22/03/25\n   Endereço : Rua Projetada\n   Descricao: Estacionar sem ticket\n   Valor        : R\$ 5,00', ),
+                      ],
+                    ),                 
                 ],
               ),
             ),
             SizedBox(height: 20),
             Container(
-              height: 63,
+              height: 140,
               width: 380,
               decoration: BoxDecoration(
                 color: AppColors.primaryColor,
@@ -145,33 +108,25 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                   width: 2.0
                 )
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('10/03/25', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Text('Av. Bandeirantes', style: TextStyle(
-                    fontSize: 11
-                  )),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Utilização de vaga', style: TextStyle(
-                        fontSize: 11
-                      )),
-                      Text('sem ticket ativo', style: TextStyle(
-                        fontSize: 11
-                      )),
-                    ],
-                  ),
-                  Text('R\$ 5,00', style: TextStyle(
-                    fontSize: 11
-                  )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                      Text('   Esperado', style:TextStyle(color:Colors.red,fontWeight:FontWeight.bold),),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('   Placa        : mlx-3335\n   Data         : 15/04/25\n   Endereço : Av Voluntarios da Patria\n   Descricao: Estacionar sem ticket\n   Valor        : R\$ 5,00', ),
+                      ],
+                    ),                 
                 ],
-              ),
+              )
             ),
-            SizedBox(height: 380),
+            SizedBox(height: 120),
             Text(
               'Para efetuar o pagamento das irregularidades, consulte o site',
               style: TextStyle(
