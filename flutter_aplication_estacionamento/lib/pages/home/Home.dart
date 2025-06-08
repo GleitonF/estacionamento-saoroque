@@ -56,17 +56,17 @@ class _MyHomePageState extends State<Home> {
                 height: 305,
                 width: 396,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Avisos',
+                        '  Avisos',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: AppColors.secondaryColor,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -174,17 +174,17 @@ class _MyHomePageState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 125, top: 20),
+                            padding: const EdgeInsets.only(left: 0, top: 20),
                             child: Expanded(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
                                     'Saldo',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black54,
+                                      color: AppColors.secondaryColor,
                                     ),
                                   ),
                                 ],
@@ -196,6 +196,7 @@ class _MyHomePageState extends State<Home> {
                             'Seu saldo atual de créditos para uso.',
                             style: TextStyle(color: AppColors.textColor),
                           ),
+                     
                           SizedBox(height: 25),
                           Row(
                             children: [
@@ -285,14 +286,14 @@ class _MyHomePageState extends State<Home> {
                         top: 8,
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            'Cadastro',
+                            ' Cadastro',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black54,
+                              color: AppColors.secondaryColor,
                             ),
                           ),
                         ],
