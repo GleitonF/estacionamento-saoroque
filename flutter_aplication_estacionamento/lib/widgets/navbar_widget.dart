@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_aplication_estacionamento/_core/app_colors.dart';
 import 'package:flutter_aplication_estacionamento/pages/home/Home.dart';
+import 'package:flutter_aplication_estacionamento/pages/irregularidades/historico_irregularidades.dart';
 import 'package:flutter_aplication_estacionamento/pages/saldo/saldo.dart';
 
 class NavbarWidget extends StatelessWidget {
@@ -71,14 +72,19 @@ class NavbarWidget extends StatelessWidget {
                 radius: 20,
                 backgroundColor: AppColors.secondaryColor,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const HistoricoIrregularidades()),
+                      );
+                  },
                   icon: Icon(
-                    Icons.refresh_outlined,
-                    color: AppColors.primaryColor,
+                  Icons.refresh_outlined,
+                     color: AppColors.primaryColor,
                   ),
                 ),
               ),
-              Text('Historico'),
+              Text('Irregula-\nridades'),
             ],
           ),
         ],
