@@ -65,27 +65,35 @@ class NavbarWidget extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            spacing: 5,
-            children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: AppColors.secondaryColor,
-                child: IconButton(
-                  onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const HistoricoIrregularidades()),
-                      );
-                  },
-                  icon: Icon(
-                  Icons.refresh_outlined,
-                     color: AppColors.primaryColor,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HistoricoIrregularidades()),
+              );
+            },
+            child:Row(
+              spacing: 5,
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundColor: AppColors.secondaryColor,
+                  child: IconButton(
+                    onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const HistoricoIrregularidades()),
+                        );
+                    },
+                    icon: Icon(
+                    Icons.refresh_outlined,
+                       color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
-              ),
-              Text('Irregula-\nridades'),
-            ],
+                Text('Irregula-\nridades'),
+              ],
+            ),
           ),
         ],
       ),
