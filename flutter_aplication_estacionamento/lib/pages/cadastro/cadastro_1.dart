@@ -108,7 +108,7 @@ class _MyHomePageState extends State<Cadastro1> {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 40),
               GestureDetector(
                 onTap: () {
                   Navigator.pop(context);

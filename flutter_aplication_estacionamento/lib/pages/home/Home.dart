@@ -383,66 +383,71 @@ class _MyHomePageState extends State<Home> {
                                     ),
                                   ),
                                   SizedBox(height: 20),
-                                  TextButton(
-                                    style: TextButton.styleFrom(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 15,
-                                      ),
-                                      backgroundColor: AppColors.secondaryColor,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return VerifiedModal(
-                                            title:
-                                                'Veículo cadastrado com sucesso!',
-                                            navigation: () {
-                                              Navigator.pushAndRemoveUntil(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) => Home(),
-                                                ),
-                                                (route) => false,
-                                              );
-                                            },
-                                            confirm: 'Voltar',
-                                          );
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                       TextButton(
+                                          style: TextButton.styleFrom(
+                                            padding: EdgeInsets.symmetric(
+                                              horizontal: 15,
+                                            ),
+                                            backgroundColor: AppColors.secondaryColor,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(5),
+                                            ),
+                                          ),
+                                          onPressed: () {
+                                            showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return VerifiedModal(
+                                                  title:
+                                                      'Veículo cadastrado com sucesso!',
+                                                  navigation: () {
+                                                    Navigator.pushAndRemoveUntil(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) => Home(),
+                                                      ),
+                                                      (route) => false,
+                                                    );
+                                                  },
+                                                  confirm: 'Voltar',
+                                                );
+                                              },
+                                            );
+                                          },
+                                          child: Text(
+                                            'Confirmar',
+                                            style: TextStyle(
+                                              color: AppColors.primaryColor,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                       SizedBox(width: 10),
+                                      TextButton(
+                                        style: TextButton.styleFrom(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 19,
+                                          ),
+                                          backgroundColor: AppColors.secondaryColor,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(5),
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(context);
                                         },
-                                      );
-                                    },
-                                    child: Text(
-                                      'Confirmar',
-                                      style: TextStyle(
-                                        color: AppColors.primaryColor,
-                                        fontWeight: FontWeight.bold,
+                                        child: Text(
+                                          'Cancelar',
+                                          style: TextStyle(
+                                            color: AppColors.primaryColor,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  TextButton(
-                                    style: TextButton.styleFrom(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 19,
-                                      ),
-                                      backgroundColor: AppColors.secondaryColor,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                    ),
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text(
-                                      'Cancelar',
-                                      style: TextStyle(
-                                        color: AppColors.primaryColor,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
+                                    ],
                                   ),
                                 ],
                               ),
