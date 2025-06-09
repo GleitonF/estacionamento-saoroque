@@ -123,8 +123,9 @@ class _MyHomePageState extends State<CompraCredito> {
                       ),
                       SizedBox(height: 10),
                       TextField(
+                        keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                        border: OutlineInputBorder(),
                         ),
                       ),
                       SizedBox(height: 20),
