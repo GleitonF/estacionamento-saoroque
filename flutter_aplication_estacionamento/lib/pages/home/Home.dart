@@ -196,7 +196,7 @@ class _MyHomePageState extends State<Home> {
                             'Seu saldo atual de créditos para uso.',
                             style: TextStyle(color: AppColors.textColor),
                           ),
-                     
+
                           SizedBox(height: 25),
                           Row(
                             children: [
@@ -356,6 +356,7 @@ class _MyHomePageState extends State<Home> {
                       ),
                       onPressed: () {
                         showDialog(
+                          barrierDismissible: false,
                           context: context,
                           builder: (context) {
                             return AlertDialog(
@@ -384,56 +385,24 @@ class _MyHomePageState extends State<Home> {
                                   ),
                                   SizedBox(height: 20),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                       TextButton(
-                                          style: TextButton.styleFrom(
-                                            padding: EdgeInsets.symmetric(
-                                              horizontal: 15,
-                                            ),
-                                            backgroundColor: AppColors.secondaryColor,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(5),
-                                            ),
-                                          ),
-                                          onPressed: () {
-                                            showDialog(
-                                              context: context,
-                                              builder: (context) {
-                                                return VerifiedModal(
-                                                  title:
-                                                      'Veículo cadastrado com sucesso!',
-                                                  navigation: () {
-                                                    Navigator.pushAndRemoveUntil(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                        builder: (context) => Home(),
-                                                      ),
-                                                      (route) => false,
-                                                    );
-                                                  },
-                                                  confirm: 'Voltar',
-                                                );
-                                              },
-                                            );
-                                          },
-                                          child: Text(
-                                            'Confirmar',
-                                            style: TextStyle(
-                                              color: AppColors.primaryColor,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                       SizedBox(width: 10),
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 19,
                                           ),
-                                          backgroundColor: AppColors.secondaryColor,
+                                          backgroundColor:
+                                              AppColors.primaryColor,
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(5),
+                                            side: BorderSide(
+                                              color: AppColors.secondaryColor,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                              5,
+                                            ),
                                           ),
                                         ),
                                         onPressed: () {
@@ -441,6 +410,50 @@ class _MyHomePageState extends State<Home> {
                                         },
                                         child: Text(
                                           'Cancelar',
+                                          style: TextStyle(
+                                            color: AppColors.secondaryColor,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: 10),
+                                      TextButton(
+                                        style: TextButton.styleFrom(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 15,
+                                          ),
+                                          backgroundColor:
+                                              AppColors.secondaryColor,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                              5,
+                                            ),
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return VerifiedModal(
+                                                title:
+                                                    'Veículo cadastrado com sucesso!',
+                                                navigation: () {
+                                                  Navigator.pushAndRemoveUntil(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder:
+                                                          (context) => Home(),
+                                                    ),
+                                                    (route) => false,
+                                                  );
+                                                },
+                                                confirm: 'OK',
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Text(
+                                          'Confirmar',
                                           style: TextStyle(
                                             color: AppColors.primaryColor,
                                             fontWeight: FontWeight.bold,

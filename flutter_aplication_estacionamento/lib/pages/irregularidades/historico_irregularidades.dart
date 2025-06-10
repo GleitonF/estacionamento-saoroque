@@ -103,7 +103,7 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                     width: 20,
                     height: 200,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 253, 195, 2),
+                      color: const Color.fromRGBO(253, 195, 2, 1),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(18),
                         bottomLeft: Radius.circular(18),
@@ -159,7 +159,7 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                     width: 20,
                     height: 200,
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: const Color.fromARGB(255, 174, 20, 9),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(18),
                         bottomLeft: Radius.circular(18),
@@ -175,10 +175,10 @@ class _MyHomePageState extends State<HistoricoIrregularidades> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Esperado',
+                          'Expirado',
                           style: TextStyle(
                             fontSize: 16,
-                            color: Colors.red,
+                            color: const Color.fromARGB(255, 174, 20, 9),
                             fontWeight: FontWeight.bold,
                           ),
                         ),

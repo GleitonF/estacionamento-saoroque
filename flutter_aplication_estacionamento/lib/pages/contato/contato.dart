@@ -112,8 +112,15 @@ class _MyHomePageState extends State<Contato> {
                                 title: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    Text('Mensagem enviada com'),
-                                    Text('sucesso!'),
+                                    Center(
+                                      child: Text(
+                                        'Mensagem enviada com sucesso!',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                                 content: Lottie.asset(
@@ -125,7 +132,11 @@ class _MyHomePageState extends State<Contato> {
                                     children: [
                                       TextButton(
                                         style: TextButton.styleFrom(
-                                          backgroundColor: AppColors.secondaryColor
+                                          backgroundColor:
+                                              AppColors.secondaryColor,
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 110,
+                                          ),
                                         ),
                                         onPressed: () {
                                           Navigator.pushAndRemoveUntil(
@@ -136,9 +147,12 @@ class _MyHomePageState extends State<Contato> {
                                             (route) => false,
                                           );
                                         },
-                                        child: Text('Ok', style: TextStyle(
-                                          color: AppColors.primaryColor
-                                        )),
+                                        child: Text(
+                                          'Ok',
+                                          style: TextStyle(
+                                            color: AppColors.primaryColor,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),

@@ -237,7 +237,7 @@ class _MyHomePageState extends State<CompraCredito> {
                                         (route) => false,
                                       );
                                     },
-                                    confirm: 'Voltar',
+                                    confirm: 'OK',
                                   );
                                 },
                               );

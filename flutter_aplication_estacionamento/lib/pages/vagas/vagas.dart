@@ -460,62 +460,76 @@ class _MyHomePageState extends State<Vagas> {
                                 SizedBox(height: 20),
                                 Text('1 Hora - Alerta - 5 Min.'),
                                 SizedBox(height: 20),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 30,
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 20,
+                                        ),
+                                        backgroundColor: AppColors.primaryColor,
+                                        shape: RoundedRectangleBorder(
+                                          side: BorderSide(
+                                            color: AppColors.secondaryColor,
+                                            width: 2,
+                                          ),
+                                          borderRadius: BorderRadius.circular(
+                                            5,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text(
+                                        'Cancelar',
+                                        style: TextStyle(
+                                          color: AppColors.secondaryColor,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                                     ),
-                                    backgroundColor: AppColors.secondaryColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (context) {
-                                        return VerifiedModal(
-                                          title:
-                                              'Estacionamento ativado com sucesso!',
-                                          navigation: () {
-                                            Navigator.pop(context);
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 20,
+                                        ),
+                                        backgroundColor:
+                                            AppColors.secondaryColor,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            5,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return VerifiedModal(
+                                              title:
+                                                  'Estacionamento ativado com sucesso!',
+                                              navigation: () {
+                                                Navigator.pop(context);
+                                              },
+                                              confirm: 'OK',
+                                            );
                                           },
-                                          confirm: 'Voltar',
                                         );
                                       },
-                                    );
-                                  },
-                                  child: Text(
-                                    'Confirmar',
-                                    style: TextStyle(
-                                      color: AppColors.primaryColor,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
+                                      child: Text(
+                                        'Confirmar',
+                                        style: TextStyle(
+                                          color: AppColors.primaryColor,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 35,
-                                    ),
-                                    backgroundColor: AppColors.secondaryColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text(
-                                    'Cancelar',
-                                    style: TextStyle(
-                                      color: AppColors.primaryColor,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  ],
                                 ),
                               ],
                             ),

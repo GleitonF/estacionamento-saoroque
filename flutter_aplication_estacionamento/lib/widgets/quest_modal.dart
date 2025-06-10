@@ -34,8 +34,12 @@ class _QuestModalState extends State<QuestModal> {
           children: [
             TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: AppColors.secondaryColor,
+                backgroundColor: AppColors.primaryColor,
                 padding: EdgeInsets.symmetric(horizontal: 30),
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(color: AppColors.secondaryColor, width: 2),
+                  borderRadius: BorderRadius.circular(30),
+                ),
               ),
               onPressed: () {
                 Navigator.pop(context);
@@ -44,7 +48,7 @@ class _QuestModalState extends State<QuestModal> {
               child: Text(
                 'Cancelar',
                 style: TextStyle(
-                  color: AppColors.primaryColor,
+                  color: AppColors.secondaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),

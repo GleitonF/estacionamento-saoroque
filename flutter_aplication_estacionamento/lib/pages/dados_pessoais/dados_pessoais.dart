@@ -253,16 +253,22 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     style: TextButton.styleFrom(
                                                       backgroundColor:
                                                           AppColors
-                                                              .secondaryColor,
+                                                              .primaryColor,
                                                       padding:
                                                           EdgeInsets.symmetric(
                                                             horizontal: 20,
-                                                            vertical: 15,
+                                                            vertical: 10,
                                                           ),
                                                       shape: RoundedRectangleBorder(
+                                                        side: BorderSide(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          width: 2,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius.circular(
-                                                              10,
+                                                              5,
                                                             ),
                                                       ),
                                                     ),
@@ -274,7 +280,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                       style: TextStyle(
                                                         color:
                                                             AppColors
-                                                                .primaryColor,
+                                                                .secondaryColor,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -288,12 +294,12 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                       padding:
                                                           EdgeInsets.symmetric(
                                                             horizontal: 20,
-                                                            vertical: 15,
+                                                            vertical: 10,
                                                           ),
                                                       shape: RoundedRectangleBorder(
                                                         borderRadius:
                                                             BorderRadius.circular(
-                                                              10,
+                                                              5,
                                                             ),
                                                       ),
                                                     ),
@@ -320,7 +326,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                                       );
                                                                     },
                                                                     confirm:
-                                                                        'Voltar',
+                                                                        'OK',
                                                                   );
                                                                 },
                                                               );
@@ -371,7 +377,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     navigation: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    confirm: 'Voltar',
+                                                    confirm: 'OK',
                                                   );
                                                 },
                                               );
@@ -524,16 +530,22 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     style: TextButton.styleFrom(
                                                       backgroundColor:
                                                           AppColors
-                                                              .secondaryColor,
+                                                              .primaryColor,
                                                       padding:
                                                           EdgeInsets.symmetric(
                                                             horizontal: 20,
-                                                            vertical: 15,
+                                                            vertical: 10,
                                                           ),
                                                       shape: RoundedRectangleBorder(
+                                                        side: BorderSide(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          width: 2,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius.circular(
-                                                              10,
+                                                              5,
                                                             ),
                                                       ),
                                                     ),
@@ -545,7 +557,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                       style: TextStyle(
                                                         color:
                                                             AppColors
-                                                                .primaryColor,
+                                                                .secondaryColor,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -559,12 +571,12 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                       padding:
                                                           EdgeInsets.symmetric(
                                                             horizontal: 20,
-                                                            vertical: 15,
+                                                            vertical: 10,
                                                           ),
                                                       shape: RoundedRectangleBorder(
                                                         borderRadius:
                                                             BorderRadius.circular(
-                                                              10,
+                                                              5,
                                                             ),
                                                       ),
                                                     ),
@@ -591,7 +603,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                                       );
                                                                     },
                                                                     confirm:
-                                                                        'Voltar',
+                                                                        'OK',
                                                                   );
                                                                 },
                                                               );
@@ -754,14 +766,18 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                       TextButton(
                                         style: TextButton.styleFrom(
                                           backgroundColor:
-                                              AppColors.secondaryColor,
+                                              AppColors.primaryColor,
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 20,
-                                            vertical: 15,
+                                            vertical: 10,
                                           ),
                                           shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: AppColors.secondaryColor,
+                                              width: 2,
+                                            ),
                                             borderRadius: BorderRadius.circular(
-                                              10,
+                                              5,
                                             ),
                                           ),
                                         ),
@@ -771,7 +787,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                         child: Text(
                                           'Cancelar',
                                           style: TextStyle(
-                                            color: AppColors.primaryColor,
+                                            color: AppColors.secondaryColor,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -782,11 +798,11 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                               AppColors.secondaryColor,
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 20,
-                                            vertical: 15,
+                                            vertical: 10,
                                           ),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(
-                                              10,
+                                              5,
                                             ),
                                           ),
                                         ),
@@ -809,7 +825,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                             context,
                                                           );
                                                         },
-                                                        confirm: 'Voltar',
+                                                        confirm: 'OK',
                                                       );
                                                     },
                                                   );
@@ -928,95 +944,108 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                         OutlineInputBorder(),
                                                   ),
                                                 ),
-                                                SizedBox(height: 20),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 15,
-                                                        ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
+                                                SizedBox(height: 30),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 19,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .primaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          side: BorderSide(
+                                                            color:
+                                                                AppColors
+                                                                    .secondaryColor,
+                                                            width: 2,
                                                           ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Text(
+                                                        'Cancelar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    showDialog(
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return QuestModal(
-                                                          text:
-                                                              'Tem certeza de que as informações estão corretas?',
-                                                          navigation: () {
-                                                            showDialog(
-                                                              context: context,
-                                                              builder: (
-                                                                context,
-                                                              ) {
-                                                                return VerifiedModal(
-                                                                  title:
-                                                                      'Placa alterada com sucesso!',
-                                                                  navigation: () {
-                                                                    Navigator.pop(
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .secondaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return QuestModal(
+                                                              text:
+                                                                  'Tem certeza de que as informações estão corretas?',
+                                                              navigation: () {
+                                                                showDialog(
+                                                                  context:
                                                                       context,
+                                                                  builder: (
+                                                                    context,
+                                                                  ) {
+                                                                    return VerifiedModal(
+                                                                      title:
+                                                                          'Placa alterada com sucesso!',
+                                                                      navigation: () {
+                                                                        Navigator.pop(
+                                                                          context,
+                                                                        );
+                                                                      },
+                                                                      confirm:
+                                                                          'OK',
                                                                     );
                                                                   },
-                                                                  confirm:
-                                                                      'Voltar',
                                                                 );
                                                               },
                                                             );
                                                           },
                                                         );
                                                       },
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    'Confirmar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 19,
+                                                      child: Text(
+                                                        'Confirmar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .primaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
                                                         ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
-                                                          ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  child: Text(
-                                                    'Cancelar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1130,93 +1159,108 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                         OutlineInputBorder(),
                                                   ),
                                                 ),
-                                                SizedBox(height: 20),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 15,
-                                                        ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
+                                                SizedBox(height: 30),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 19,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .primaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          side: BorderSide(
+                                                            color:
+                                                                AppColors
+                                                                    .secondaryColor,
+                                                            width: 2,
                                                           ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Text(
+                                                        'Cancelar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    showDialog(
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return QuestModal(
-                                                          text:
-                                                              'Tem certeza de que deseja remover este veículo?',
-                                                          navigation: () {
-                                                            showDialog(
-                                                              context: context,
-                                                              builder: (
-                                                                context,
-                                                              ) {
-                                                                return VerifiedModal(
-                                                                  title:
-                                                                      'Veículo alterado com sucesso!',
-                                                                  navigation: () {
-                                                                    Navigator.pop(
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .secondaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return QuestModal(
+                                                              text:
+                                                                  'Tem certeza de que deseja remover este veículo?',
+                                                              navigation: () {
+                                                                showDialog(
+                                                                  context:
                                                                       context,
+                                                                  builder: (
+                                                                    context,
+                                                                  ) {
+                                                                    return VerifiedModal(
+                                                                      title:
+                                                                          'Veículo alterado com sucesso!',
+                                                                      navigation: () {
+                                                                        Navigator.pop(
+                                                                          context,
+                                                                        );
+                                                                      },
+                                                                      confirm:
+                                                                          'OK',
                                                                     );
                                                                   },
-                                                                  confirm:
-                                                                      'Voltar',
                                                                 );
                                                               },
                                                             );
                                                           },
                                                         );
                                                       },
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    'Confirmar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 19,
+                                                      child: Text(
+                                                        'Confirmar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .primaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
                                                         ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
-                                                          ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {},
-                                                  child: Text(
-                                                    'Cancelar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1248,7 +1292,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     navigation: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    confirm: 'Voltar',
+                                                    confirm: 'OK',
                                                   );
                                                 },
                                               );
@@ -1271,11 +1315,11 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                       ),
                       SizedBox(height: 30),
                       Container(
-                        height: 42,
+                        height: 48,
                         width: 150,
                         decoration: BoxDecoration(
                           color: AppColors.secondaryColor,
-                          borderRadius: BorderRadius.circular(9),
+                          borderRadius: BorderRadius.circular(5),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1309,65 +1353,86 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                               border: OutlineInputBorder(),
                                             ),
                                           ),
-                                          SizedBox(height: 20),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              padding: EdgeInsets.symmetric(
-                                                horizontal: 15,
+                                          SizedBox(height: 30),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                  padding: EdgeInsets.symmetric(
+                                                    horizontal: 19,
+                                                  ),
+                                                  backgroundColor:
+                                                      AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    side: BorderSide(
+                                                      color:
+                                                          AppColors
+                                                              .secondaryColor,
+                                                      width: 2,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text(
+                                                  'Cancelar',
+                                                  style: TextStyle(
+                                                    color:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
                                               ),
-                                              backgroundColor:
-                                                  AppColors.secondaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {
-                                              showDialog(
-                                                context: context,
-                                                builder: (context) {
-                                                  return VerifiedModal(
-                                                    title:
-                                                        'Veículo cadastrado com sucesso!',
-                                                    navigation: () {
-                                                      Navigator.pop(context);
+
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                  padding: EdgeInsets.symmetric(
+                                                    horizontal: 15,
+                                                  ),
+                                                  backgroundColor:
+                                                      AppColors.secondaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return VerifiedModal(
+                                                        title:
+                                                            'Veículo cadastrado com sucesso!',
+                                                        navigation: () {
+                                                          Navigator.pop(
+                                                            context,
+                                                          );
+                                                        },
+                                                        confirm: 'OK',
+                                                      );
                                                     },
-                                                    confirm: 'Voltar',
                                                   );
                                                 },
-                                              );
-                                            },
-                                            child: Text(
-                                              'Confirmar',
-                                              style: TextStyle(
-                                                color: AppColors.primaryColor,
-                                                fontWeight: FontWeight.bold,
+                                                child: Text(
+                                                  'Confirmar',
+                                                  style: TextStyle(
+                                                    color:
+                                                        AppColors.primaryColor,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
                                               ),
-                                            ),
-                                          ),
-                                          SizedBox(height: 10),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              padding: EdgeInsets.symmetric(
-                                                horizontal: 19,
-                                              ),
-                                              backgroundColor:
-                                                  AppColors.secondaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {
-                                              Navigator.pop(context);
-                                            },
-                                            child: Text(
-                                              'Cancelar',
-                                              style: TextStyle(
-                                                color: AppColors.primaryColor,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
+                                            ],
                                           ),
                                         ],
                                       ),
@@ -1376,7 +1441,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                 );
                               },
                               child: Text(
-                                'Novo veículo',
+                                'Novo Veículo',
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: AppColors.primaryColor,
@@ -1469,95 +1534,108 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                         OutlineInputBorder(),
                                                   ),
                                                 ),
-                                                SizedBox(height: 20),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 15,
-                                                        ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
+                                                SizedBox(height: 30),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 19,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .primaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          side: BorderSide(
+                                                            color:
+                                                                AppColors
+                                                                    .secondaryColor,
+                                                            width: 2,
                                                           ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Text(
+                                                        'Cancelar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    showDialog(
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return QuestModal(
-                                                          text:
-                                                              'Tem certeza de que alterar seu telefone?',
-                                                          navigation: () {
-                                                            showDialog(
-                                                              context: context,
-                                                              builder: (
-                                                                context,
-                                                              ) {
-                                                                return VerifiedModal(
-                                                                  title:
-                                                                      'Telefone alterado com sucesso!',
-                                                                  navigation: () {
-                                                                    Navigator.pop(
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .secondaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return QuestModal(
+                                                              text:
+                                                                  'Tem certeza de que alterar seu telefone?',
+                                                              navigation: () {
+                                                                showDialog(
+                                                                  context:
                                                                       context,
+                                                                  builder: (
+                                                                    context,
+                                                                  ) {
+                                                                    return VerifiedModal(
+                                                                      title:
+                                                                          'Telefone alterado com sucesso!',
+                                                                      navigation: () {
+                                                                        Navigator.pop(
+                                                                          context,
+                                                                        );
+                                                                      },
+                                                                      confirm:
+                                                                          'OK',
                                                                     );
                                                                   },
-                                                                  confirm:
-                                                                      'Voltar',
                                                                 );
                                                               },
                                                             );
                                                           },
                                                         );
                                                       },
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    'Confirmar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 19,
+                                                      child: Text(
+                                                        'Confirmar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .primaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
                                                         ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
-                                                          ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  child: Text(
-                                                    'Cancelar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1589,7 +1667,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     navigation: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    confirm: 'Voltar',
+                                                    confirm: 'OK',
                                                   );
                                                 },
                                               );
@@ -1668,95 +1746,108 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                         OutlineInputBorder(),
                                                   ),
                                                 ),
-                                                SizedBox(height: 20),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 15,
-                                                        ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
+                                                SizedBox(height: 30),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 19,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .primaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          side: BorderSide(
+                                                            color:
+                                                                AppColors
+                                                                    .secondaryColor,
+                                                            width: 2,
                                                           ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Text(
+                                                        'Cancelar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .secondaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    showDialog(
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return QuestModal(
-                                                          text:
-                                                              'Tem certeza de que as informações estão corretas?',
-                                                          navigation: () {
-                                                            showDialog(
-                                                              context: context,
-                                                              builder: (
-                                                                context,
-                                                              ) {
-                                                                return VerifiedModal(
-                                                                  title:
-                                                                      'Placa alterada com sucesso!',
-                                                                  navigation: () {
-                                                                    Navigator.pop(
+                                                    TextButton(
+                                                      style: TextButton.styleFrom(
+                                                        padding:
+                                                            EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                            ),
+                                                        backgroundColor:
+                                                            AppColors
+                                                                .secondaryColor,
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                5,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      onPressed: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return QuestModal(
+                                                              text:
+                                                                  'Tem certeza de que as informações estão corretas?',
+                                                              navigation: () {
+                                                                showDialog(
+                                                                  context:
                                                                       context,
+                                                                  builder: (
+                                                                    context,
+                                                                  ) {
+                                                                    return VerifiedModal(
+                                                                      title:
+                                                                          'Placa alterada com sucesso!',
+                                                                      navigation: () {
+                                                                        Navigator.pop(
+                                                                          context,
+                                                                        );
+                                                                      },
+                                                                      confirm:
+                                                                          'Voltar',
                                                                     );
                                                                   },
-                                                                  confirm:
-                                                                      'Voltar',
                                                                 );
                                                               },
                                                             );
                                                           },
                                                         );
                                                       },
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    'Confirmar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10),
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                          horizontal: 19,
+                                                      child: Text(
+                                                        'Confirmar',
+                                                        style: TextStyle(
+                                                          color:
+                                                              AppColors
+                                                                  .primaryColor,
+                                                          fontWeight:
+                                                              FontWeight.bold,
                                                         ),
-                                                    backgroundColor:
-                                                        AppColors
-                                                            .secondaryColor,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            5,
-                                                          ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
-                                                  },
-                                                  child: Text(
-                                                    'Cancelar',
-                                                    style: TextStyle(
-                                                      color:
-                                                          AppColors
-                                                              .primaryColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1788,7 +1879,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                     navigation: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    confirm: 'Voltar',
+                                                    confirm: 'OK',
                                                   );
                                                 },
                                               );
@@ -1814,8 +1905,8 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                         style: TextButton.styleFrom(
                           backgroundColor: AppColors.secondaryColor,
                           padding: EdgeInsets.symmetric(
-                            horizontal: 20,
-                            vertical: 10,
+                            horizontal: 30,
+                            vertical: 15,
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
@@ -1850,67 +1941,74 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                         border: OutlineInputBorder(),
                                       ),
                                     ),
-                                    SizedBox(height: 20),
-                                    TextButton(
-                                      style: TextButton.styleFrom(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 15,
-                                        ),
-                                        backgroundColor:
-                                            AppColors.secondaryColor,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            5,
+                                    SizedBox(height: 30),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        TextButton(
+                                          style: TextButton.styleFrom(
+                                            padding: EdgeInsets.symmetric(
+                                              horizontal: 19,
+                                            ),
+                                            backgroundColor:
+                                                AppColors.primaryColor,
+                                            shape: RoundedRectangleBorder(
+                                              side: BorderSide(
+                                                color: AppColors.secondaryColor,
+                                                width: 2,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                            ),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text(
+                                            'Cancelar',
+                                            style: TextStyle(
+                                              color: AppColors.secondaryColor,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      onPressed: () {
-                                        showDialog(
-                                          context: context,
-                                          builder: (context) {
-                                            return VerifiedModal(
-                                              title:
-                                                  'Telefone cadastrado com sucesso!',
-                                              navigation: () {
-                                                Navigator.pop(context);
+                                        TextButton(
+                                          style: TextButton.styleFrom(
+                                            padding: EdgeInsets.symmetric(
+                                              horizontal: 15,
+                                            ),
+                                            backgroundColor:
+                                                AppColors.secondaryColor,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                            ),
+                                          ),
+                                          onPressed: () {
+                                            showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return VerifiedModal(
+                                                  title:
+                                                      'Telefone cadastrado com sucesso!',
+                                                  navigation: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  confirm: 'OK',
+                                                );
                                               },
-                                              confirm: 'Voltar',
                                             );
                                           },
-                                        );
-                                      },
-                                      child: Text(
-                                        'Confirmar',
-                                        style: TextStyle(
-                                          color: AppColors.primaryColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(height: 10),
-                                    TextButton(
-                                      style: TextButton.styleFrom(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 19,
-                                        ),
-                                        backgroundColor:
-                                            AppColors.secondaryColor,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            5,
+                                          child: Text(
+                                            'Confirmar',
+                                            style: TextStyle(
+                                              color: AppColors.primaryColor,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text(
-                                        'Cancelar',
-                                        style: TextStyle(
-                                          color: AppColors.primaryColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
+                                      ],
                                     ),
                                   ],
                                 ),

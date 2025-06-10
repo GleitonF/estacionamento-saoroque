@@ -140,11 +140,18 @@ class _MyHomePageState extends State<AtualizarCadastro> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 40,
-                            width: 141,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 35,
+                              vertical: 8.5,
+                            ),
+
                             decoration: BoxDecoration(
-                              color: AppColors.secondaryColor,
-                              borderRadius: BorderRadius.circular(9),
+                              color: AppColors.primaryColor,
+                              border: Border.all(
+                                color: AppColors.secondaryColor,
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.circular(5),
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +160,7 @@ class _MyHomePageState extends State<AtualizarCadastro> {
                                   'Limpar',
                                   style: TextStyle(
                                     fontSize: 16,
-                                    color: AppColors.primaryColor,
+                                    color: AppColors.secondaryColor,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -183,10 +190,10 @@ class _MyHomePageState extends State<AtualizarCadastro> {
                                         MaterialPageRoute(
                                           builder: (context) => DadosPessoais(),
                                         ),
-                                        (route) => false
+                                        (route) => false,
                                       );
                                     },
-                                    confirm: 'Voltar',
+                                    confirm: 'OK',
                                   );
                                 },
                               );
@@ -200,24 +207,6 @@ class _MyHomePageState extends State<AtualizarCadastro> {
                               ),
                             ),
                           ),
-                          // Container(
-                          //   height: 40,
-                          //   width: 141,
-                          //   decoration: BoxDecoration(
-                          //     color: AppColors.secondaryColor,
-                          //     borderRadius: BorderRadius.circular(9)
-                          //   ),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     children: [
-                          //       Text('Confirmar', style: TextStyle(
-                          //         fontSize: 16,
-                          //         color: AppColors.primaryColor,
-                          //         fontWeight: FontWeight.bold
-                          //       )),
-                          //     ],
-                          //   ),
-                          // ),
                         ],
                       ),
                     ],
