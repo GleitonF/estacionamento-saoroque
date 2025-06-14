@@ -14,6 +14,29 @@ class DadosPessoais extends StatefulWidget {
 }
 
 class _DadosPessoaisState extends State<DadosPessoais> {
+  String placa1 = "ETF-4D60";
+  String placa2 = "FSM-1C13";
+
+  String telefone1 = "(11) 99953-2469";
+  String telefone2 = "(11) 4784-8532";
+
+  late TextEditingController telefoneController;
+  late TextEditingController telefoneController2;
+
+  late TextEditingController placaController;
+  late TextEditingController placaController2;
+
+  @override
+  void initState() {
+    super.initState();
+    placaController = TextEditingController(text: placa1);
+    placaController2 = TextEditingController(text: placa2);
+    telefoneController = TextEditingController(text: telefone1);
+    telefoneController2 = TextEditingController(text: telefone2);
+  }
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -232,15 +255,6 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                   onChanged: (value) {},
                                                 ),
                                                 SizedBox(height: 15),
-                                                TextFormField(
-                                                  keyboardType:
-                                                      TextInputType.number,
-                                                  decoration: InputDecoration(
-                                                    labelText: 'CVV',
-                                                    border:
-                                                        OutlineInputBorder(),
-                                                  ),
-                                                ),
                                               ],
                                             ),
                                             actions: [
@@ -939,10 +953,11 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                 ),
                                                 SizedBox(height: 10),
                                                 TextFormField(
+                                                  controller: placaController,
                                                   decoration: InputDecoration(
-                                                    border:
-                                                        OutlineInputBorder(),
+                                                    border: OutlineInputBorder(),
                                                   ),
+                                                  
                                                 ),
                                                 SizedBox(height: 30),
                                                 Row(
@@ -1154,6 +1169,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                 ),
                                                 SizedBox(height: 10),
                                                 TextFormField(
+                                                  controller: placaController2,
                                                   decoration: InputDecoration(
                                                     border:
                                                         OutlineInputBorder(),
@@ -1527,6 +1543,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                 ),
                                                 SizedBox(height: 10),
                                                 TextFormField(
+                                                  controller: telefoneController,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   decoration: InputDecoration(
@@ -1741,6 +1758,7 @@ class _DadosPessoaisState extends State<DadosPessoais> {
                                                 ),
                                                 SizedBox(height: 10),
                                                 TextFormField(
+                                                  controller: telefoneController2,
                                                   decoration: InputDecoration(
                                                     border:
                                                         OutlineInputBorder(),

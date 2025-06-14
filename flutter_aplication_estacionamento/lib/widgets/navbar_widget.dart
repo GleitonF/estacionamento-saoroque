@@ -86,12 +86,12 @@ class NavbarWidget extends StatelessWidget {
                         );
                     },
                     icon: Icon(
-                    Icons.refresh_outlined,
+                    Icons.warning,
                        color: AppColors.primaryColor,
                     ),
                   ),
                 ),
-                Text('Irregula-\nridades'),
+                Text('Irregular'),
               ],
             ),
           ),

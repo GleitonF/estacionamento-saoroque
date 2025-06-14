@@ -139,32 +139,37 @@ class _MyHomePageState extends State<AtualizarCadastro> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 35,
-                              vertical: 8.5,
-                            ),
-
-                            decoration: BoxDecoration(
-                              color: AppColors.primaryColor,
-                              border: Border.all(
-                                color: AppColors.secondaryColor,
-                                width: 2,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 35,
+                                vertical: 8.5,
                               ),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Limpar',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.secondaryColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                            
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryColor,
+                                border: Border.all(
+                                  color: AppColors.secondaryColor,
+                                  width: 2,
                                 ),
-                              ],
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Cancelar',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColors.secondaryColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           TextButton(

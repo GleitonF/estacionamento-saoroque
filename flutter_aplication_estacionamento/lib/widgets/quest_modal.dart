@@ -43,7 +43,7 @@ class _QuestModalState extends State<QuestModal> {
               ),
               onPressed: () {
                 Navigator.pop(context);
-                widget.navigation();
+                // widget.navigation();
               },
               child: Text(
                 'Cancelar',

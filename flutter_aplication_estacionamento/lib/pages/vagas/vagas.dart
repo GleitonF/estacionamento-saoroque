@@ -13,6 +13,15 @@ class Vagas extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<Vagas> {
+
+  ValueNotifier<bool> botao1 = ValueNotifier(false);
+  ValueNotifier<bool> botao2 = ValueNotifier(false);
+  ValueNotifier<bool> botao3 = ValueNotifier(false);
+
+  ValueNotifier<bool> min1 = ValueNotifier(false);
+  ValueNotifier<bool> min2 = ValueNotifier(false);
+  ValueNotifier<bool> min3 = ValueNotifier(false);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +84,121 @@ class _MyHomePageState extends State<Vagas> {
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      title: Text(
+                                        'Cadastro de Veículo',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      content: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          SizedBox(height: 10),
+                                          Row(
+                                            children: [
+                                              Text('Insira a Placa do Veículo'),
+                                            ],
+                                          ),
+                                          SizedBox(height: 10),
+                                          TextFormField(
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(),
+                                            ),
+                                          ),
+                                          SizedBox(height: 30),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                  padding: EdgeInsets.symmetric(
+                                                    horizontal: 19,
+                                                  ),
+                                                  backgroundColor:
+                                                      AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    side: BorderSide(
+                                                      color:
+                                                          AppColors
+                                                              .secondaryColor,
+                                                      width: 2,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text(
+                                                  'Cancelar',
+                                                  style: TextStyle(
+                                                    color:
+                                                        AppColors
+                                                            .secondaryColor,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+
+                                              TextButton(
+                                                style: TextButton.styleFrom(
+                                                  padding: EdgeInsets.symmetric(
+                                                    horizontal: 15,
+                                                  ),
+                                                  backgroundColor:
+                                                      AppColors.secondaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return VerifiedModal(
+                                                        title:
+                                                            'Veículo cadastrado com sucesso!',
+                                                        navigation: () {
+                                                          Navigator.pop(
+                                                            context,
+                                                          );
+                                                        },
+                                                        confirm: 'OK',
+                                                      );
+                                                    },
+                                                  );
+                                                },
+                                                child: Text(
+                                                  'Confirmar',
+                                                  style: TextStyle(
+                                                    color:
+                                                        AppColors.primaryColor,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                );
+                            },
                             child: Text(
                               'Adicionar Veículo',
                               style: TextStyle(
@@ -129,56 +252,86 @@ class _MyHomePageState extends State<Vagas> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
+                                          ValueListenableBuilder(
+                                            valueListenable: botao1,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                              return TextButton(
+                                              style: TextButton.styleFrom(
+                                                backgroundColor: botao1.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(5),
+                                                ),
                                               ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '1 Hora',
-                                              style: TextStyle(
-                                                color: Colors.black,
+                                              onPressed: () {
+                                                setState(() {
+                                                  botao1.value = !botao1.value ;
+                                                  botao2.value  = false;
+                                                  botao3.value  = false;
+                                                });
+                                              },
+                                              child: Text(
+                                                '1 Hora',
+                                                style: TextStyle(
+                                                  color: botao1.value  ? AppColors.primaryColor : Colors.black
+                                                ),
                                               ),
-                                            ),
+                                            );
+                                             },
                                           ),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
+                                          ValueListenableBuilder(
+                                            valueListenable: botao2,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                              return TextButton(
+                                              style: TextButton.styleFrom(
+                                                backgroundColor: botao2.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(5),
+                                                ),
                                               ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '2 Horas',
-                                              style: TextStyle(
-                                                color: Colors.black,
+                                              onPressed: () {
+                                                 setState(() {
+                                                  botao2.value = !botao2.value;
+                                                  botao1.value = false;
+                                                  botao3.value = false;
+                                                });
+                                              },
+                                              child: Text(
+                                                '2 Horas',
+                                                style: TextStyle(
+                                                   color: botao2.value ? AppColors.primaryColor : Colors.black
+                                                ),
                                               ),
-                                            ),
+                                            );
+                                             },
                                           ),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '3 Horas',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                              ),
-                                            ),
+                                          ValueListenableBuilder(
+                                            valueListenable: botao3,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                                return TextButton(
+                                                style: TextButton.styleFrom(
+                                                  backgroundColor: botao3.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  setState(() {
+                                                    botao3.value = !botao3.value;
+                                                    botao2.value = false;
+                                                    botao1.value = false;
+                                                  });
+                                                },
+                                                child: Text(
+                                                  '3 Horas',
+                                                  style: TextStyle(
+                                                    color: botao3.value ? AppColors.primaryColor : Colors.black
+                                                  ),
+                                                ),
+                                              );
+                                            },
                                           ),
                                         ],
                                       ),
@@ -273,58 +426,90 @@ class _MyHomePageState extends State<Vagas> {
                                       ),
                                       content: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                         children: [
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '15 min.',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                              ),
-                                            ),
+                                          ValueListenableBuilder(
+                                            valueListenable: min1,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                                return TextButton(
+                                                style: TextButton.styleFrom(
+                                                  backgroundColor: min1.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  setState(() {
+                                                    min1.value = !min1.value;
+                                                    min2.value = false;
+                                                    min3.value = false;
+                                                  });
+                                                },
+                                                child: Text(
+                                                  '15 min.',
+                                                  style: TextStyle(
+                                                    color: min1.value ? AppColors.primaryColor : Colors.black,
+                                                  ),
+                                                ),
+                                              );
+                                            },
                                           ),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '10 min.',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                              ),
-                                            ),
+                                          ValueListenableBuilder(
+                                            valueListenable: min2,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                              return TextButton(
+                                                style: TextButton.styleFrom(
+                                                  backgroundColor: min2.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  setState(() {
+                                                    min2.value = !min2.value;
+                                                    min1.value = false;
+                                                    min3.value = false;
+                                                  });
+                                                },
+                                                child: Text(
+                                                  '10 min.',
+                                                  style: TextStyle(
+                                                    color: min2.value ? AppColors.primaryColor : Colors.black
+                                                  ),
+                                                ),
+                                              );
+                                             },
+                                            
                                           ),
-                                          TextButton(
-                                            style: TextButton.styleFrom(
-                                              backgroundColor:
-                                                  AppColors.primaryColor,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                              ),
-                                            ),
-                                            onPressed: () {},
-                                            child: Text(
-                                              '5 min.',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                              ),
-                                            ),
+                                          ValueListenableBuilder(
+                                            valueListenable: min3,
+                                            builder: (BuildContext context, value, Widget? child) { 
+                                              return TextButton(
+                                                style: TextButton.styleFrom(
+                                                  backgroundColor: min3.value ? AppColors.secondaryColor : AppColors.primaryColor,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(5),
+                                                  ),
+                                                ),
+                                                onPressed: () {
+                                                  setState(() {
+                                                    min3.value = !min2.value;
+                                                    min2.value = false;
+                                                    min1.value = false;
+                                                  });
+                                                },
+                                                child: Text(
+                                                  '5 min.',
+                                                  style: TextStyle(
+                                                    color: min3.value ? AppColors.primaryColor : Colors.black
+                                                  ),
+                                                ),
+                                              );
+                                             },
+                                            
                                           ),
                                         ],
                                       ),
